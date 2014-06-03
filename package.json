@@ -12,7 +12,8 @@
     "url": "https://github.com/scott113341/website/issues"
   },
   "devDependencies": {
-    "grunt": "~0.4.5"
+    "grunt": "~0.4.5",
+    "gulp": "~3.7.0"
   },
   "dependencies": {
     "express": "~4.4.1"
