@@ -1,12 +1,12 @@
-# ScottHardy.me
+# [ScottHardy.me](http://scotthardy.me)
 
 This is my personal website.  Here's how it works:
 
-1. Grunt.js is used to compile:
-  * An Angular.js app
-  * LESS styling
-  * JavaScript libraries installed with Bower
+1. [Grunt](http://gruntjs.com/) is used to compile:
+  * An [AngularJS](https://angularjs.org/) app
+  * [Less](http://lesscss.org/) styling into CSS
+  * JavaScript libraries installed with [Bower](http://bower.io/)
 
-2. Express.js is used to serve up these static assets
+2. [Express](http://expressjs.com/) is used to serve up these static assets
 
-3. Heroku hosts the website on a free instance because they're awesome
+3. [Heroku](https://www.heroku.com/) hosts the website on a free instance because they're awesome
