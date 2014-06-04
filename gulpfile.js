@@ -2,6 +2,10 @@ var gulp = require('gulp');
 var concat = require('gulp-concat');
 var less = require('gulp-less');
 var uglify = require('gulp-uglify');
+var nodemon = require('gulp-nodemon');
+
+
+
 
 gulp.task('html', function() {
   gulp.src(['./src/html/**/*.html'])
@@ -23,4 +27,14 @@ gulp.task('js', function() {
     .pipe(gulp.dest('./public'));
 });
 
-gulp.task('default', ['html', 'css', 'js']);
+gulp.task('nodemon', function () {
+  nodemon({ script: 'index.js', ext: 'html less js' })
+    .on('start', ['compile'])
+    .on('change', ['compile']);
+});
+
+
+
+
+gulp.task('default', ['nodemon']);
+gulp.task('compile', ['html', 'css', 'js']);
