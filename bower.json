@@ -4,5 +4,8 @@
   "homepage": "https://github.com/scott113341/website",
   "description": "Scott Hardy's personal website.",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "normalize-css": "~3.0.1"
+  }
 }
