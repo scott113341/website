@@ -28,13 +28,16 @@ gulp.task('js', function() {
 });
 
 gulp.task('nodemon', function () {
-  nodemon({ script: 'index.js', ext: 'html less js' })
-    .on('start', ['compile'])
+  nodemon({
+    script: 'index.js',
+    ext: 'html less js',
+    ignore: ['./public/**']
+  })
     .on('change', ['compile']);
 });
 
 
 
 
-gulp.task('default', ['nodemon']);
+gulp.task('default', ['compile', 'nodemon']);
 gulp.task('compile', ['html', 'css', 'js']);
