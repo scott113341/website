@@ -2,12 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 router.get('/', function(req, res) {
-  res.send('Meowwwwww');
+  res.sendfile('./public/index.html');
 });
-
-router.get('/trash', function(req, res) {
-  res.render('index.html');
-});
-
 
 module.exports = router;
