@@ -13,6 +13,11 @@ gulp.task('html', function() {
     .pipe(plumber())
     .pipe(concat('index.html'))
     .pipe(gulp.dest('./public'));
+
+  // copy angular templates to ./public
+  gulp.src(['./src/js/templates/**/*.html'])
+    .pipe(plumber())
+    .pipe(gulp.dest('./public/templates'));
 });
 
 gulp.task('css', function() {
@@ -24,7 +29,11 @@ gulp.task('css', function() {
 });
 
 gulp.task('js', function() {
-  gulp.src(['./src/js/**/*.js'])
+  gulp.src([
+      './bower_components/angular/angular.js',
+      './bower_components/angular-route/angular-route.js',
+      './src/js/**/*.js'
+    ])
     .pipe(plumber())
     .pipe(concat('application.js'))
     // .pipe(uglify())
