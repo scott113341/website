@@ -1,0 +1,13 @@
+@screen-sm-min: 768px;
+@screen-md-min: 992px;
+@screen-lg-min: 1200px;
+
+.sm(@rules) {
+  @media (max-width: @screen-sm-min) { @rules(); }
+}
+.md(@rules) {
+  @media (max-width: @screen-md-min) { @rules(); }
+}
+.lg(@rules) {
+  @media (min-width: @screen-lg-min) { @rules(); }
+}
