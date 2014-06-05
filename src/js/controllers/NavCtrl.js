@@ -23,6 +23,6 @@ app.controller('NavCtrl', ['$scope', '$location', function($scope, $location) {
   ];
 
   $scope.isActive = function (path) {
-    return path === $location.path();
+    return path.split('/')[1] === $location.path().split('/')[1];
   };
 }]);
