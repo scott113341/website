@@ -3,6 +3,7 @@ var plumber = require('gulp-plumber');
 var concat = require('gulp-concat');
 var less = require('gulp-less');
 var uglify = require('gulp-uglify');
+var markdown = require('gulp-markdown');
 var nodemon = require('gulp-nodemon');
 
 
@@ -53,8 +54,15 @@ gulp.task('nodemon', function () {
     .on('change', ['compile']);
 });
 
+gulp.task('markdown', function () {
+  return gulp.src('./src/blog/*.md')
+    .pipe(plumber())
+    .pipe(markdown())
+    .pipe(gulp.dest('./public/blog'));
+});
+
 
 
 
 gulp.task('default', ['compile', 'nodemon']);
-gulp.task('compile', ['html', 'css', 'js']);
+gulp.task('compile', ['html', 'css', 'js', 'markdown']);

@@ -10,7 +10,12 @@ app.config(['$routeProvider', function($routeProvider) {
         templateUrl: 'templates/projects.html'
       })
       .when('/blog', {
-        templateUrl: 'templates/blog.html'
+        templateUrl: 'templates/blog.html',
+        controller: 'BlogCtrl'
+      })
+      .when('/blog/:post', {
+        templateUrl: 'templates/blog-post.html',
+        controller: 'BlogPostCtrl'
       })
       .when('/resume', {
         templateUrl: 'templates/resume.html',

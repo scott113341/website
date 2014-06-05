@@ -22402,7 +22402,12 @@ app.config(['$routeProvider', function($routeProvider) {
         templateUrl: 'templates/projects.html'
       })
       .when('/blog', {
-        templateUrl: 'templates/blog.html'
+        templateUrl: 'templates/blog.html',
+        controller: 'BlogCtrl'
+      })
+      .when('/blog/:post', {
+        templateUrl: 'templates/blog-post.html',
+        controller: 'BlogPostCtrl'
       })
       .when('/resume', {
         templateUrl: 'templates/resume.html',
@@ -22414,6 +22419,17 @@ app.config(['$routeProvider', function($routeProvider) {
       });
 }]);
 
+app.controller('BlogCtrl', ['$scope', '$routeParams', function($scope, $routeParams) {
+  $scope.post = $routeParams.post;
+
+}]);
+
+app.controller('BlogPostCtrl', ['$scope', '$routeParams', function($scope, $routeParams) {
+  $scope.blogPost = function() {
+    return '/blog/' + $routeParams.post + '.html';
+  };
+}]);
+
 app.controller('HeaderCtrl', ['$scope', '$location', function($scope, $location) {
   $scope.header = function() {
     var header = 'SCOTT HARDY';
@@ -22423,6 +22439,8 @@ app.controller('HeaderCtrl', ['$scope', '$location', function($scope, $location)
       var split = path.split('/');
       header += ' / ' + split[1].toUpperCase();
     }
+
+    header = 'SCOTT HARDY';
 
     return header;
   };
@@ -22457,7 +22475,7 @@ app.controller('NavCtrl', ['$scope', '$location', function($scope, $location) {
   ];
 
   $scope.isActive = function (path) {
-    return path === $location.path();
+    return path.split('/')[1] === $location.path().split('/')[1];
   };
 }]);
 

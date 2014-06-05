@@ -18,7 +18,8 @@
     "gulp-less": "~1.2.3",
     "gulp-uglify": "~0.3.0",
     "gulp-nodemon": "~1.0.3",
-    "gulp-plumber": "~0.6.2"
+    "gulp-plumber": "~0.6.2",
+    "gulp-markdown": "~0.1.2"
   },
   "dependencies": {
     "express": "~4.4.1"
