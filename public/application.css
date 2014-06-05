@@ -1050,8 +1050,8 @@ body {
   padding-top: 10px;
 }
 ul.nav {
-  margin: 20px 0 0 0;
-  padding: 0;
+  padding: 20px 0 0 0;
+  margin: 0;
 }
 ul.nav li {
   list-style: none;
@@ -1088,7 +1088,7 @@ ul.nav li:hover:not(.active) a {
 }
 @media (max-width: 768px) {
   ul.nav {
-    margin: 10px 0;
+    padding: 10px 0;
     border-bottom: 2px solid #999999;
   }
 }
