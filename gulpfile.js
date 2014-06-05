@@ -15,7 +15,7 @@ gulp.task('html', function() {
     .pipe(concat('index.html'))
     .pipe(gulp.dest('./public'));
 
-  // copy angular templates to ./public
+  // copy angular templates
   gulp.src(['./src/js/templates/**/*.html'])
     .pipe(plumber())
     .pipe(gulp.dest('./public/templates'));
@@ -28,9 +28,10 @@ gulp.task('css', function() {
     .pipe(concat('application.css'))
     .pipe(gulp.dest('./public'));
 
-  gulp.src(['./src/fonts/ss-social-regular/webfonts/*'])
+  // copy ss-social-regular font
+  gulp.src(['./src/fonts/ss-social-regular/webfonts/ss-social-regular.*'])
     .pipe(plumber())
-    .pipe(gulp.dest('./public'));
+    .pipe(gulp.dest('./public/fonts/ss-social-regular'));
 });
 
 gulp.task('js', function() {

@@ -1042,8 +1042,8 @@ hr {
 */
 @font-face {
   font-family: "SSSocialRegular";
-  src: url('ss-social-regular.eot');
-  src: url('ss-social-regular.eot?#iefix') format('embedded-opentype'), url('ss-social-regular.woff') format('woff'), url('ss-social-regular.ttf') format('truetype'), url('ss-social-regular.svg#SSSocialRegular') format('svg');
+  src: url('fonts/ss-social-regular/ss-social-regular.eot');
+  src: url('fonts/ss-social-regular/ss-social-regular.eot?#iefix') format('embedded-opentype'), url('fonts/ss-social-regular/ss-social-regular.woff') format('woff'), url('fonts/ss-social-regular/ss-social-regular.ttf') format('truetype'), url('fonts/ss-social-regular/ss-social-regular.svg#SSSocialRegular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -1383,8 +1383,8 @@ ul.nav li:hover:not(.active) {
 */
 @font-face {
   font-family: "SSSocialRegular";
-  src: url('ss-social-regular.eot');
-  src: url('ss-social-regular.eot?#iefix') format('embedded-opentype'), url('ss-social-regular.woff') format('woff'), url('ss-social-regular.ttf') format('truetype'), url('ss-social-regular.svg#SSSocialRegular') format('svg');
+  src: url('fonts/ss-social-regular/ss-social-regular.eot');
+  src: url('fonts/ss-social-regular/ss-social-regular.eot?#iefix') format('embedded-opentype'), url('fonts/ss-social-regular/ss-social-regular.woff') format('woff'), url('fonts/ss-social-regular/ss-social-regular.ttf') format('truetype'), url('fonts/ss-social-regular/ss-social-regular.svg#SSSocialRegular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -1715,8 +1715,8 @@ ul.nav li:hover:not(.active) {
 */
 @font-face {
   font-family: "SSSocialRegular";
-  src: url('ss-social-regular.eot');
-  src: url('ss-social-regular.eot?#iefix') format('embedded-opentype'), url('ss-social-regular.woff') format('woff'), url('ss-social-regular.ttf') format('truetype'), url('ss-social-regular.svg#SSSocialRegular') format('svg');
+  src: url('fonts/ss-social-regular/ss-social-regular.eot');
+  src: url('fonts/ss-social-regular/ss-social-regular.eot?#iefix') format('embedded-opentype'), url('fonts/ss-social-regular/ss-social-regular.woff') format('woff'), url('fonts/ss-social-regular/ss-social-regular.ttf') format('truetype'), url('fonts/ss-social-regular/ss-social-regular.svg#SSSocialRegular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
