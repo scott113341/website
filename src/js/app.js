@@ -1,8 +1,17 @@
-var meow = 'meowwwwwwwwwwwwwwww';
+var app = angular.module('website', ['ngRoute']);
 
-console.log(meow);
+app.config(['$routeProvider', function($routeProvider) {
+    $routeProvider
+      .when('/', {
+        templateUrl: 'templates/home.html',
+        controller: 'HomeCtrl'
+      })
+      .when('/resume', {
+        templateUrl: 'templates/resume.html',
+        controller: 'ResumeCtrl'
+      })
 
-var a = function() {
-  var weofihweof = 123;
-  return weofihweof;
-};
+      .otherwise({
+        redirectTo: '/'
+      });
+}]);

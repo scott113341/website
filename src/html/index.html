@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="website">
   <head>
     <title>Scott Hardy</title>
 
@@ -20,40 +20,17 @@
       </div>
 
 
-
-
       <div class="row">
         <div class="col-sm-2">
-          <ul class="nav">
-            <li class="active"><a href="/">Home</a></li>
-            <li><a href="/#/projects">Projects</a></li>
-            <li><a href="/#/blog">Blog</a></li>
-            <li><a href="/#/resume">R&eacute;sum&eacute;</a></li>
+          <ul class="nav" ng-controller="NavCtrl">
+            <li ng-repeat="link in links" ng-class="{active: isActive(link.path)}">
+              <a ng-href="{{link.href}}">{{link.name}}</a>
+            </li>
           </ul>
         </div>
-        <div class="col-sm-10">
-          <h1>Hi, my name is Scott and this is my website.</h1>
-          <p>blah</p>
-          <p>blah</p>
-          <p>blah</p>
-          <p>blah</p>
-          <p>blah</p>
-          <p>blah</p>
-          <p>blah</p>
-          <p>blah</p>
-          <p>blah</p>
-          <p>blah</p>
-          <p>blah</p>
-          <p>blah</p>
-          <p>blah</p>
-          <p>blah</p>
-          <p>blah</p>
-          <p>blah</p>
-          <p>blah</p>
-        </div>
+
+        <div class="col-sm-10" ng-view></div>
       </div>
-
-
 
 
       <div class="row">
@@ -65,7 +42,6 @@
           </div>
         </div>
       </div>
-
     </div>
   </body>
 </html>
