@@ -26,6 +26,10 @@ gulp.task('css', function() {
     .pipe(less())
     .pipe(concat('application.css'))
     .pipe(gulp.dest('./public'));
+
+  gulp.src(['./src/fonts/ss-social-regular/webfonts/*'])
+    .pipe(plumber())
+    .pipe(gulp.dest('./public'));
 });
 
 gulp.task('js', function() {
