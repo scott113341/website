@@ -8,6 +8,8 @@ app.controller('HeaderCtrl', ['$scope', '$location', function($scope, $location)
       header += ' / ' + split[1].toUpperCase();
     }
 
+    header = 'SCOTT HARDY';
+
     return header;
   };
 }]);
