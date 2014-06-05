@@ -3,9 +3,8 @@ var app = express();
 
 var routes = require('./routes/routes');
 
-app.use(routes);
 app.use(express.static('./public'));
-
+app.use(routes);
 
 var port = Number(process.env.PORT || 3000);
 app.listen(port, function() {
