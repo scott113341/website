@@ -13,49 +13,17 @@
   <body>
     <div class="container-fluid">
 
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="header" ng-controller="HeaderCtrl">
-            <h1>{{header()}}</h1>
-          </div>
-        </div>
-      </div>
+      <% include partials/header.html %>
 
 
       <div class="row">
-        <div class="col-sm-2">
-          <ul class="nav" ng-controller="NavCtrl">
-            <li ng-repeat="link in links" ng-class="{active: isActive(link.path)}">
-              <a ng-href="{{link.href}}">{{link.name}}</a>
-            </li>
-          </ul>
-        </div>
-
+        <div class="col-sm-2"><% include partials/nav.html %></div>
         <div class="col-sm-10" ng-view></div>
       </div>
 
 
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="footer">
-            <div class="row">
-              <div class="col-sm-4 left">
-                <p>
-                  <a href="mailto:scott.the.hardy@gmail.com" target="_blank"><i class="ss-mail"></i></a>
-                  <a href="https://github.com/scott113341" target="_blank"><i class="ss-octocat"></i></a>
-                  <a href="https://www.linkedin.com/pub/scott-hardy/30/b0a/39" target="_blank"><i class="ss-linkedin"></i></a>
-                </p>
-              </div>
-              <div class="col-sm-4 middle">
-                <p></p>
-              </div>
-              <div class="col-sm-4 right">
-                <p>Source code available on <a href="https://github.com/scott113341/website">Github</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <% include partials/footer.html %>
+
     </div>
   </body>
 </html>

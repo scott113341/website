@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var plumber = require('gulp-plumber');
+var ejs = require('gulp-ejs');
 var concat = require('gulp-concat');
 var less = require('gulp-less');
 var uglify = require('gulp-uglify');
@@ -10,14 +11,16 @@ var nodemon = require('gulp-nodemon');
 
 
 gulp.task('html', function() {
-  gulp.src(['./src/html/**/*.html'])
+  gulp.src(['./src/html/index.html'])
     .pipe(plumber())
     .pipe(concat('index.html'))
+    .pipe(ejs())
     .pipe(gulp.dest('./public'));
 
   // copy angular templates
   gulp.src(['./src/js/templates/**/*.html'])
     .pipe(plumber())
+    .pipe(ejs())
     .pipe(gulp.dest('./public/templates'));
 });
 

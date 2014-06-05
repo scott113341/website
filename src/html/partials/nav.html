@@ -1,0 +1,5 @@
+<ul class="nav" ng-controller="NavCtrl">
+  <li ng-repeat="link in links" ng-class="{active: isActive(link.path)}">
+    <a ng-href="{{link.href}}">{{link.name}}</a>
+  </li>
+</ul>
