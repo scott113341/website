@@ -22399,7 +22399,8 @@ app.config(['$routeProvider', function($routeProvider) {
         controller: 'HomeCtrl'
       })
       .when('/projects', {
-        templateUrl: 'templates/projects.html'
+        templateUrl: 'templates/projects.html',
+        controller: 'ProjectsCtrl'
       })
       .when('/blog', {
         templateUrl: 'templates/blog.html',
@@ -22478,6 +22479,10 @@ app.controller('NavCtrl', ['$scope', '$location', function($scope, $location) {
   };
 }]);
 
+app.controller('ProjectsCtrl', ['$scope', 'projectService', function($scope, projectService) {
+  $scope.projects = projectService.projects();
+}]);
+
 app.controller('ResumeCtrl', ['$scope', function($scope) {
   $scope.meow = 'Meowwwwwwwww';
 }]);
@@ -22496,6 +22501,34 @@ app.service('blogPostService', function() {
         path: '2014-6-5-test-post',
         date: new Date(2014, 5, 5, 18, 24),
         tldr: 'This is a short tl;dr of the blog post.'
+      }
+    ];
+  };
+});
+
+app.service('projectService', function() {
+  this.projects = function() {
+    return [
+      {
+        name: 'SCU•classes',
+        link: 'http://scuclasses.com/',
+        src_link: 'https://github.com/scott113341/SCUclasses',
+        description: 'This is a description of the project.',
+        technologies: ['Angular.js', 'Ruby on Rails', 'SASS', 'Bootstrap', 'PostgreSQL', 'Nokogiri', 'Rake']
+      },
+      {
+        name: 'SCU•books',
+        link: 'http://scubooks.com/',
+        src_link: 'https://github.com/scott113341/SCUclasses',
+        description: 'This is a description of the project.',
+        technologies: ['Angular.js', 'Ruby on Rails', 'API libraries', 'SASS', 'Bootstrap', 'Nokogiri', 'Rake']
+      },
+      {
+        name: 'Powder Keg Brewing Company Website',
+        link: 'http://www.powderkegbrewingcompany.com/',
+        src_link: 'https://github.com/scott113341/SCUclasses',
+        description: 'This is a description of the project.',
+        technologies: ['Angular.js', 'Ruby on Rails', 'SASS']
       }
     ];
   };

@@ -4,11 +4,15 @@
   <p>Here's a showcase of the projects I'm most proud of.</p>
 
   <div class="row">
-    <div class="col-sm-6" ng-repeat="project in [1,2,3,4,5,6,7]">
+    <div class="col-sm-6" ng-repeat="project in projects">
       <div class="project">
-        <h2>SCUclasses</h2>
+        <h2>{{project.name}}</h2>
+        <p><a ng-href="{{project.link}}" target="_blank">Visit site</a> | <a ng-href="{{project.src_link}}" target="_blank">View source</a></p>
+        <p>{{project.description}}</p>
+        <p>{{project}}</p>
 
-        <p>Here's some description of the project.  Here's some description of the project.  Here's some description of the project.  Here's some description of the project.  Here's some description of the project.  Here's some description of the project.  Here's some description of the project.  Here's some description of the project.  </p>
+        <strong>Technologies used:</strong>
+        <span class="tag" ng-repeat="t in project.technologies">{{t}}</span>
       </div>
     </div>
   </div>

@@ -1313,7 +1313,7 @@ body {
   padding-top: 10px;
 }
 .footer p {
-  margin: 0;
+  margin: 0 0 10px;
 }
 .footer .middle {
   text-align: center;
@@ -1381,6 +1381,13 @@ ul.nav li:hover:not(.active) {
 }
 .projects .project h2 {
   text-align: center;
+}
+.projects .project span.tag {
+  margin: 0 4px 6px;
+  padding: 3px 5px;
+  background: lightsalmon;
+  border-radius: 3px;
+  display: inline-block;
 }
 
 
@@ -1667,7 +1674,7 @@ body {
   padding-top: 10px;
 }
 .footer p {
-  margin: 0;
+  margin: 0 0 10px;
 }
 .footer .middle {
   text-align: center;
@@ -1984,6 +1991,13 @@ body {
 }
 
 
+.blog-post h1:first-of-type {
+  margin-bottom: 3px;
+}
+.blog-post h4:first-of-type {
+  margin-top: 0;
+}
+
 .projects .project {
   padding: 5px 15px;
   margin-bottom: 30px;
@@ -1991,4 +2005,11 @@ body {
 }
 .projects .project h2 {
   text-align: center;
+}
+.projects .project span.tag {
+  margin: 0 4px 6px;
+  padding: 3px 5px;
+  background: lightsalmon;
+  border-radius: 3px;
+  display: inline-block;
 }
