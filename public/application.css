@@ -1361,6 +1361,19 @@ ul.nav li:hover:not(.active) {
     border-bottom: 2px solid #999999;
   }
 }
+.blog .post {
+  padding-bottom: 10px;
+}
+.blog .post h2 {
+  margin-bottom: 3px;
+}
+.blog .post h2 small {
+  color: #999999;
+  padding-left: 7px;
+}
+.blog .post p {
+  margin: 4px 0 0;
+}
 .projects .project {
   padding: 5px 15px;
   margin-bottom: 30px;
@@ -1970,15 +1983,6 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
-
-.projects .project {
-  padding: 5px 15px;
-  margin-bottom: 30px;
-  background: #f1f1f1;
-}
-.projects .project h2 {
-  text-align: center;
-}
 
 .projects .project {
   padding: 5px 15px;

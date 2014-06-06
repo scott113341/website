@@ -52,14 +52,14 @@ gulp.task('js', function() {
 gulp.task('nodemon', function () {
   nodemon({
     script: 'index.js',
-    ext: 'html less js',
+    ext: 'html less js md',
     ignore: ['./public/**']
   })
     .on('change', ['compile']);
 });
 
 gulp.task('markdown', function () {
-  return gulp.src('./src/blog/*.md')
+  gulp.src('./src/blog/*.md')
     .pipe(plumber())
     .pipe(markdown())
     .pipe(gulp.dest('./public/blog'));
