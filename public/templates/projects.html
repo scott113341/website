@@ -4,7 +4,7 @@
   <p>Here's a showcase of the projects I'm most proud of.</p>
 
   <div class="row">
-    <div class="col-sm-6" ng-repeat="project in projects">
+    <div class="col-sm-6" ng-repeat-start="project in projects">
       <div class="project">
         <h2 class="name">{{project.name}}</h2>
 
@@ -20,5 +20,7 @@
         <span class="tag" ng-repeat="t in project.technologies">{{t}}</span>
       </div>
     </div>
+
+    <div class="clearfix hidden-xs" ng-repeat-end ng-if="$index % 2 === 1"></div>
   </div>
 </div>

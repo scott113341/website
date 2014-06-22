@@ -3,6 +3,10 @@
  * Copyright 2011-2014 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+/*
+ * custom build
+ * grid system, basic utilities, responsive utilities
+ */
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -1030,6 +1034,169 @@ hr {
     margin-left: 0%;
   }
 }
+.clearfix:before,
+.clearfix:after,
+.container:before,
+.container:after,
+.container-fluid:before,
+.container-fluid:after,
+.row:before,
+.row:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after,
+.container:after,
+.container-fluid:after,
+.row:after {
+  clear: both;
+}
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.pull-right {
+  float: right !important;
+}
+.pull-left {
+  float: left !important;
+}
+.hide {
+  display: none !important;
+}
+.show {
+  display: block !important;
+}
+.invisible {
+  visibility: hidden;
+}
+.text-hide {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+.affix {
+  position: fixed;
+}
+@-ms-viewport {
+  width: device-width;
+}
+.visible-xs,
+.visible-sm,
+.visible-md,
+.visible-lg {
+  display: none !important;
+}
+@media (max-width: 767px) {
+  .visible-xs {
+    display: block !important;
+  }
+  table.visible-xs {
+    display: table;
+  }
+  tr.visible-xs {
+    display: table-row !important;
+  }
+  th.visible-xs,
+  td.visible-xs {
+    display: table-cell !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .visible-sm {
+    display: block !important;
+  }
+  table.visible-sm {
+    display: table;
+  }
+  tr.visible-sm {
+    display: table-row !important;
+  }
+  th.visible-sm,
+  td.visible-sm {
+    display: table-cell !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .visible-md {
+    display: block !important;
+  }
+  table.visible-md {
+    display: table;
+  }
+  tr.visible-md {
+    display: table-row !important;
+  }
+  th.visible-md,
+  td.visible-md {
+    display: table-cell !important;
+  }
+}
+@media (min-width: 1200px) {
+  .visible-lg {
+    display: block !important;
+  }
+  table.visible-lg {
+    display: table;
+  }
+  tr.visible-lg {
+    display: table-row !important;
+  }
+  th.visible-lg,
+  td.visible-lg {
+    display: table-cell !important;
+  }
+}
+@media (max-width: 767px) {
+  .hidden-xs {
+    display: none !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .hidden-sm {
+    display: none !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .hidden-md {
+    display: none !important;
+  }
+}
+@media (min-width: 1200px) {
+  .hidden-lg {
+    display: none !important;
+  }
+}
+.visible-print {
+  display: none !important;
+}
+@media print {
+  .visible-print {
+    display: block !important;
+  }
+  table.visible-print {
+    display: table;
+  }
+  tr.visible-print {
+    display: table-row !important;
+  }
+  th.visible-print,
+  td.visible-print {
+    display: table-cell !important;
+  }
+}
+@media print {
+  .hidden-print {
+    display: none !important;
+  }
+}
 @charset "UTF-8";
 /*
 * Symbolset
@@ -1315,6 +1482,13 @@ body {
 .footer p {
   margin: 0 0 10px;
 }
+.footer .left {
+  font-size: 18px;
+}
+.footer .left a {
+  margin-right: 5px;
+  text-decoration: none;
+}
 .footer .middle {
   text-align: center;
 }
@@ -1385,6 +1559,7 @@ ul.nav li:hover:not(.active) {
 .projects .project img {
   display: block;
   margin: auto;
+  max-width: 100%;
 }
 .projects .project p.visit {
   text-align: center;
@@ -1682,6 +1857,13 @@ body {
 }
 .footer p {
   margin: 0 0 10px;
+}
+.footer .left {
+  font-size: 18px;
+}
+.footer .left a {
+  margin-right: 5px;
+  text-decoration: none;
 }
 .footer .middle {
   text-align: center;
@@ -2016,6 +2198,7 @@ body {
 .projects .project img {
   display: block;
   margin: auto;
+  max-width: 100%;
 }
 .projects .project p.visit {
   text-align: center;
