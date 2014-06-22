@@ -1499,6 +1499,11 @@ ul.nav {
   padding: 20px 0 0 0;
   margin: 0;
 }
+@media (min-width: 768px) {
+  ul.nav {
+    min-height: 300px;
+  }
+}
 ul.nav li {
   list-style: none;
   width: 80%;
@@ -1874,6 +1879,11 @@ body {
 ul.nav {
   padding: 20px 0 0 0;
   margin: 0;
+}
+@media (min-width: 768px) {
+  ul.nav {
+    min-height: 300px;
+  }
 }
 ul.nav li {
   list-style: none;

@@ -2,6 +2,10 @@ ul.nav {
   padding: 20px 0 0 0;
   margin: 0;
 
+  .sm({
+    min-height: 300px;
+  });
+
   li {
     list-style: none;
     width: 80%;
@@ -13,7 +17,7 @@ ul.nav {
       color: @dark-gray;
       text-decoration: none;
 
-      .sm({
+      .xs({
         padding: 10px;
       });
     }
@@ -34,12 +38,12 @@ ul.nav {
       }
     }
 
-    .sm({
+    .xs({
       width: 100%;
     });
   }
 
-  .sm({
+  .xs({
     padding: 10px 0;
     border-bottom: 2px solid @border-gray;
   });
