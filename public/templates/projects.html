@@ -6,10 +6,15 @@
   <div class="row">
     <div class="col-sm-6" ng-repeat="project in projects">
       <div class="project">
-        <h2>{{project.name}}</h2>
-        <p><a ng-href="{{project.link}}" target="_blank">Visit site</a> | <a ng-href="{{project.src_link}}" target="_blank">View source</a></p>
+        <h2 class="name">{{project.name}}</h2>
+
+        <a ng-href="{{project.link}}" target="_blank"><img ng-src="{{project.img}}" /></a>
+
+        <p class="visit"><a ng-href="{{project.link}}" target="_blank">Visit site</a>
+          <span ng-if="project.src_link">| <a ng-href="{{project.src_link}}" target="_blank">View source</a></span>
+        </p>
+
         <p>{{project.description}}</p>
-        <p>{{project}}</p>
 
         <strong>Technologies used:</strong>
         <span class="tag" ng-repeat="t in project.technologies">{{t}}</span>

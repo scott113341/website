@@ -1379,7 +1379,14 @@ ul.nav li:hover:not(.active) {
   margin-bottom: 30px;
   background: #f1f1f1;
 }
-.projects .project h2 {
+.projects .project h2.name {
+  text-align: center;
+}
+.projects .project img {
+  display: block;
+  margin: auto;
+}
+.projects .project p.visit {
   text-align: center;
 }
 .projects .project span.tag {
@@ -2003,7 +2010,14 @@ body {
   margin-bottom: 30px;
   background: #f1f1f1;
 }
-.projects .project h2 {
+.projects .project h2.name {
+  text-align: center;
+}
+.projects .project img {
+  display: block;
+  margin: auto;
+}
+.projects .project p.visit {
   text-align: center;
 }
 .projects .project span.tag {
