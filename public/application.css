@@ -1564,6 +1564,7 @@ ul.nav li:hover:not(.active) {
 .projects .project img {
   display: block;
   margin: auto;
+  width: 80%;
   max-width: 100%;
 }
 .projects .project p.visit {
@@ -2208,6 +2209,7 @@ body {
 .projects .project img {
   display: block;
   margin: auto;
+  width: 80%;
   max-width: 100%;
 }
 .projects .project p.visit {
