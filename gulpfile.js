@@ -28,6 +28,7 @@ gulp.task('css', function() {
   gulp.src(['./src/css/**/*.less'])
     .pipe(plumber())
     .pipe(less())
+    //.pipe(less({compress: true}))
     .pipe(concat('application.css'))
     .pipe(gulp.dest('./public'));
 
@@ -44,8 +45,8 @@ gulp.task('js', function() {
       './src/js/**/*.js'
     ])
     .pipe(plumber())
+    //.pipe(uglify())
     .pipe(concat('application.js'))
-    // .pipe(uglify())
     .pipe(gulp.dest('./public'));
 });
 
