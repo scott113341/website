@@ -1521,13 +1521,13 @@ ul.nav li a {
   }
 }
 ul.nav li.active {
-  background: #ff0000;
+  background: #e54141;
 }
 ul.nav li.active a {
   color: white;
 }
 ul.nav li:hover:not(.active) {
-  background: #ffcccc;
+  background: #f7c8c8;
 }
 @media (max-width: 768px) {
   ul.nav li {
@@ -1902,13 +1902,13 @@ ul.nav li a {
   }
 }
 ul.nav li.active {
-  background: #ff0000;
+  background: #e54141;
 }
 ul.nav li.active a {
   color: white;
 }
 ul.nav li:hover:not(.active) {
-  background: #ffcccc;
+  background: #f7c8c8;
 }
 @media (max-width: 768px) {
   ul.nav li {
