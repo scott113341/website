@@ -22430,20 +22430,7 @@ app.controller('BlogPostCtrl', ['$scope', '$routeParams', function($scope, $rout
   };
 }]);
 
-app.controller('HeaderCtrl', ['$scope', '$location', function($scope, $location) {
-  $scope.header = function() {
-    var header = 'SCOTT HARDY';
-    var path = $location.path();
-
-    if (path.length > 1) {
-      var split = path.split('/');
-      header += ' / ' + split[1].toUpperCase();
-    }
-
-    header = 'SCOTT HARDY';
-
-    return header;
-  };
+app.controller('HeaderCtrl', ['$scope', function($scope) {
 }]);
 
 app.controller('HomeCtrl', ['$scope', function($scope) {
