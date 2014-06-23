@@ -1553,6 +1553,12 @@ ul.nav li:hover:not(.active) {
 .blog .post p {
   margin: 4px 0 0;
 }
+.blog-post h1:first-of-type {
+  margin-bottom: 3px;
+}
+.blog-post h4:first-of-type {
+  margin-top: 0;
+}
 .projects .project {
   padding: 5px 15px;
   margin-bottom: 30px;
