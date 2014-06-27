@@ -22,6 +22,14 @@ app.service('projectService', function() {
         link: 'http://www.powderkegbrewingcompany.com',
         description: 'This is the website for Powder Keg Brewing Comapany, a new craft microbrewery in Niwot, Colorado.  The website is still under development (as is the brewery).',
         technologies: ['Angular.js', 'Ruby on Rails', 'SASS']
+      },
+      {
+        name: 'Appicenter',
+        img: 'https://s3-us-west-2.amazonaws.com/scotthardy/scuclasses.png',
+        link: 'http://scuclasses.com',
+        src_link: 'https://github.com/scott113341/appicenter',
+        description: 'Ryan Tsao and I entered this for the 24-hour <a href="http://www.eventbrite.com/e/broncohack-tickets-11364859601" target="blank">Broncohack hackathon</a>.  The prompt was for an in-game app experience for the San Jose Earthquakes soccer team.  Our project was a jumbotron display, fan mobile phone display, and admin interface.  The two modules we completed ',
+        technologies: ['Firebase', 'Angular.js', 'Gulp.js', 'LESS', 'Bootstrap']
       }
     ];
   };
