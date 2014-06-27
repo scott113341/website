@@ -1,12 +1,12 @@
-var gulp = require('gulp');
-var del = require('del');
-var plumber = require('gulp-plumber');
-var ejs = require('gulp-ejs');
-var concat = require('gulp-concat');
-var less = require('gulp-less');
-var uglify = require('gulp-uglify');
-var markdown = require('gulp-markdown');
-var nodemon = require('gulp-nodemon');
+var gulp = require('gulp')
+  , del = require('del')
+  , plumber = require('gulp-plumber')
+  , ejs = require('gulp-ejs')
+  , concat = require('gulp-concat')
+  , less = require('gulp-less')
+  , uglify = require('gulp-uglify')
+  , markdown = require('gulp-markdown')
+  , nodemon = require('gulp-nodemon');
 
 
 
