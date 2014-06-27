@@ -22471,7 +22471,6 @@ app.controller('ProjectsCtrl', ['$scope', 'projectService', function($scope, pro
 }]);
 
 app.controller('ResumeCtrl', ['$scope', function($scope) {
-  $scope.meow = 'Meowwwwwwwww';
 }]);
 
 app.service('blogPostService', function() {
