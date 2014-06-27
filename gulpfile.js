@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var del = require('del');
 var plumber = require('gulp-plumber');
 var ejs = require('gulp-ejs');
 var concat = require('gulp-concat');
@@ -9,6 +10,10 @@ var nodemon = require('gulp-nodemon');
 
 
 
+
+gulp.task('clean', function(cb) {
+  del(['public/**/*'], cb);
+});
 
 gulp.task('html', function() {
   gulp.src(['./src/html/index.html'])
@@ -70,4 +75,4 @@ gulp.task('markdown', function () {
 
 
 gulp.task('default', ['compile', 'nodemon']);
-gulp.task('compile', ['html', 'css', 'js', 'markdown']);
+gulp.task('compile', ['clean', 'html', 'css', 'js', 'markdown']);
