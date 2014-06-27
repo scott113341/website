@@ -10,8 +10,10 @@
 
         <a ng-href="{{project.link}}" target="_blank"><img ng-src="{{project.img}}" /></a>
 
-        <p class="visit"><a ng-href="{{project.link}}" target="_blank">Visit site</a>
-          <span ng-if="project.src_link">| <a ng-href="{{project.src_link}}" target="_blank">View source</a></span>
+        <p class="visit">
+          <span ng-if="project.link"><a ng-href="{{project.link}}" target="_blank">Visit site</a></span>
+          <span ng-if="project.link && project.src_link"> | </span>
+          <span ng-if="project.src_link"><a ng-href="{{project.src_link}}" target="_blank">View source</a></span>
         </p>
 
         <p>{{project.description}}</p>

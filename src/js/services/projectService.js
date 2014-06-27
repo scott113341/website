@@ -25,10 +25,9 @@ app.service('projectService', function() {
       },
       {
         name: 'Appicenter',
-        img: 'https://s3-us-west-2.amazonaws.com/scotthardy/scuclasses.png',
-        link: 'http://scuclasses.com',
+        img: 'https://s3-us-west-2.amazonaws.com/scotthardy/appicenter.png',
         src_link: 'https://github.com/scott113341/appicenter',
-        description: 'Ryan Tsao and I entered this for the 24-hour <a href="http://www.eventbrite.com/e/broncohack-tickets-11364859601" target="blank">Broncohack hackathon</a>.  The prompt was for an in-game app experience for the San Jose Earthquakes soccer team.  Our project was a jumbotron display, fan mobile phone display, and admin interface.  The two modules we completed ',
+        description: 'Ryan Tsao and I entered this for the 24-hour Broncohack hackathon.  The prompt was for an in-game app experience for the San Jose Earthquakes soccer team.  Our project consisted of a jumbotron display, mobile phone display, and admin interface.  The app implemented a real-time auctioning system and Instagram feed.',
         technologies: ['Firebase', 'Angular.js', 'Gulp.js', 'LESS', 'Bootstrap']
       }
     ];
