@@ -55,6 +55,13 @@ gulp.task('js', function() {
     .pipe(gulp.dest('./public'));
 });
 
+gulp.task('markdown', function () {
+  gulp.src('./src/blog/*.md')
+    .pipe(plumber())
+    .pipe(markdown())
+    .pipe(gulp.dest('./public/blog'));
+});
+
 gulp.task('nodemon', function () {
   nodemon({
     script: 'index.js',
@@ -62,13 +69,6 @@ gulp.task('nodemon', function () {
     ignore: ['./public/**']
   })
     .on('change', ['compile']);
-});
-
-gulp.task('markdown', function () {
-  gulp.src('./src/blog/*.md')
-    .pipe(plumber())
-    .pipe(markdown())
-    .pipe(gulp.dest('./public/blog'));
 });
 
 
