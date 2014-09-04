@@ -20,6 +20,7 @@ app.service('projectService', function() {
         name: 'Powder Keg Brewing Company Website',
         img: 'https://s3-us-west-2.amazonaws.com/scotthardy/pkbc.png',
         link: 'http://www.powderkegbrewingcompany.com',
+        src_link: 'https://github.com/scott113341/powderkegbrewingcompany',
         description: 'This is the website for Powder Keg Brewing Company, a new craft microbrewery in Niwot, Colorado.',
         technologies: ['Ruby on Rails', 'Angular.js']
       },
