@@ -62,6 +62,12 @@ gulp.task('markdown', function () {
     .pipe(gulp.dest('./public/blog'));
 });
 
+gulp.task('favicons', function() {
+  gulp.src(['./src/favicons/**'])
+    .pipe(plumber())
+    .pipe(gulp.dest('./public'));
+});
+
 gulp.task('nodemon', function () {
   nodemon({
     script: 'index.js',
@@ -75,4 +81,4 @@ gulp.task('nodemon', function () {
 
 
 gulp.task('default', ['compile', 'nodemon']);
-gulp.task('compile', ['clean', 'html', 'css', 'js', 'markdown']);
+gulp.task('compile', ['clean', 'html', 'css', 'js', 'markdown', 'favicons']);
