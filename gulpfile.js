@@ -47,6 +47,8 @@ gulp.task('js', function() {
   gulp.src([
       './bower_components/angular/angular.js',
       './bower_components/angular-route/angular-route.js',
+      './bower_components/angulartics/dist/angulartics.min.js',
+      './bower_components/angulartics/dist/angulartics-ga.min.js',
       './src/js/**/*.js'
     ])
     .pipe(plumber())
