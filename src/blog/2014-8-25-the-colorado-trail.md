@@ -148,3 +148,13 @@ Overall, it has been an amazing trip and experience and I will most definitely b
 **Time**: 9:30 - 3:45 (6.25 hours)  
 **Distance**: 13 mi  
 **Total**: 104.4 mi
+
+
+## Stats
+**Total Time**: 57.5 hours  
+**Total Distance**: 104.4 miles  
+**Average Speed**: 1.81 miles/hour  
+**Average Daily Distance**: 13 miles  
+**Total Elevation Gain**: 17612 feet  
+**Total Elevation Loss**: 13937 feet  
+**Net Elevation Gain**: 3675 feet
