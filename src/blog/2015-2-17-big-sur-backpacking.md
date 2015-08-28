@@ -55,7 +55,7 @@ Once the sun went down the campsite got really cold and damp, so we decided to f
 **Dinner**: Mountain House Turkey Tetrazzini (4/5)  
 **Beer**: Kirin Ichiban, Anderson Valley Blood Orange Gose  
 
-**Time**: 11:30-7:00 (7.5 hours)  
+**Time**: 11:30 - 7:00 (7.5 hours)  
 **Distance**: 4.7 mi  
 **Total**: 11.7 mi
 
@@ -63,6 +63,6 @@ Once the sun went down the campsite got really cold and damp, so we decided to f
 ## Day 4
 Today was a nice, easy, downhill hike out to Bottcher’s gap.  It was a little surreal because none of us really recognized any of the trail on the way out, probably because we were delirious from lack of sleep on the way in.  Regardless, the hike was easy and pleasant; a great end to a great trip!
 
-**Time**: 10:00-12:00 (2 hours)  
+**Time**: 10:00 - 12:00 (2 hours)  
 **Distance**: 3.1 mi  
 **Total**: 14.8 mi
