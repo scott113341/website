@@ -19,7 +19,7 @@ gulp.task('html', function() {
     .pipe(plumber())
     .pipe(concat('index.html'))
     .pipe(ejs())
-    .pipe(gulp.dest('./build'));
+    .pipe(gulp.dest('./'));
 
   // copy angular templates
   gulp.src(['./src/js/templates/**/*.html'])
