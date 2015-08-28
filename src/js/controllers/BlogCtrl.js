@@ -1,3 +1,5 @@
-app.controller('BlogCtrl', ['$scope', 'blogPostService', function($scope, blogPostService) {
-  $scope.posts = blogPostService.posts();
+app.controller('BlogCtrl', ['$scope', 'BlogPostService', function($scope, BlogPostService) {
+
+  $scope.posts = BlogPostService.posts();
+
 }]);

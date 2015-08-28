@@ -1,4 +1,5 @@
 app.controller('NavCtrl', ['$scope', '$location', function($scope, $location) {
+
   $scope.links = [
     {
       name: 'Home',
@@ -25,4 +26,5 @@ app.controller('NavCtrl', ['$scope', '$location', function($scope, $location) {
   $scope.isActive = function (path) {
     return path.split('/')[1] === $location.path().split('/')[1];
   };
+
 }]);

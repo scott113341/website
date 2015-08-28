@@ -1,3 +1,5 @@
-app.controller('ProjectsCtrl', ['$scope', 'projectService', function($scope, projectService) {
-  $scope.projects = projectService.projects();
+app.controller('ProjectsCtrl', ['$scope', 'ProjectService', function($scope, ProjectService) {
+
+  $scope.projects = ProjectService.projects();
+
 }]);

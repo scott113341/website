@@ -1,4 +1,4 @@
-app.service('blogPostService', function() {
+app.service('BlogPostService', function() {
   this.posts = function() {
     return [
       {

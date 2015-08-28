@@ -1,4 +1,4 @@
-app.service('projectService', function() {
+app.service('ProjectService', function() {
   this.projects = function() {
     return [
       {
