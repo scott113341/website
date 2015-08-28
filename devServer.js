@@ -1,10 +1,7 @@
 var express = require('express');
 var app = express();
 
-var routes = require('./routes');
-
-app.use(express.static('./public'));
-app.use(routes);
+app.use(express.static('./'));
 
 var port = Number(process.env.PORT || 3000);
 app.listen(port, function() {
