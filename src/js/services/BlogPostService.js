@@ -5,7 +5,7 @@ app.service('BlogPostService', function() {
         title: 'The Great Car Experiment of 2015 is Over',
         path: '2015-10-19-the-great-car-experiment-of-2015-is-over',
         date: new Date(2015, 10-1, 19),
-        tldr: "Living in the Subaru was great and easier than expected."
+        tldr: "Living in the Subaru was great and easier than expected.  eBay perks definitely helped.  10/10 would/will do again."
       },
       {
         title: 'Living in my Car',
