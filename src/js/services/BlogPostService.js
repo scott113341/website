@@ -2,6 +2,12 @@ app.service('BlogPostService', function() {
   this.posts = function() {
     return [
       {
+        title: 'The Great Car Experiment of 2015 is Over',
+        path: '2015-10-19-the-great-car-experiment-of-2015-is-over',
+        date: new Date(2015, 10-1, 19),
+        tldr: "Living in the Subaru was great and easier than expected."
+      },
+      {
         title: 'Living in my Car',
         path: '2015-8-30-living-in-my-car',
         date: new Date(2015, 8-1, 30),
