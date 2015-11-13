@@ -7,8 +7,9 @@
     <meta name="google-site-verification" content="EHkUAAPr6Gml10wBbmwxjQEFwMrI08RVUpnOcpM1s_U" />
 
     <link href="https://fonts.googleapis.com/css?family=Lato:100italic,100,300italic,300,400italic,400,700italic,700,900italic,900|Montserrat:400,700" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="/build/application.css" />
-    <script src="/build/application.js"></script>
+
+    <link rel="stylesheet" href="/build/application.css?v=<%= Date.now() %>" />
+    <script src="/build/application.js?v=<%= Date.now() %>"></script>
 
     <% include partials/favicons.html %>
   </head>
