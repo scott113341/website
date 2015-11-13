@@ -3,6 +3,7 @@
   "description": "Scott Hardy's personal website.",
   "main": "index.js",
   "scripts": {
+    "build": "rm -rf ./build; gulp build",
     "start": "rm -rf ./build; gulp default"
   },
   "repository": {
@@ -25,8 +26,5 @@
     "gulp-nodemon": "~1.0.3",
     "gulp-plumber": "~0.6.2",
     "gulp-uglify": "~0.3.0"
-  },
-  "dependencies": {
-    "express": "~4.4.1"
   }
 }
