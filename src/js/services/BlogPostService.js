@@ -2,6 +2,12 @@ app.service('BlogPostService', function() {
   this.posts = function() {
     return [
       {
+        title: 'My Coke Bot',
+        path: '2016-01-16-my-coke-bot',
+        date: new Date(2016, 1-1, 16),
+        tldr: "Made a web service that will enter My Coke Rewards codes sent via text message."
+      },
+      {
         title: '3d Printed Custom Toilet Paper Holder',
         path: '2015-11-12-toilet-paper-holder',
         date: new Date(2015, 11-1, 12),

@@ -1,0 +1,30 @@
+<h1 id="my-coke-bot">My Coke Bot</h1>
+<h4 id="january-16-2016">January 16, 2016</h4>
+<p><a href="http://www.mycokerewards.com">My Coke Rewards</a> is a program run by Coca-Cola that allows you to collect and redeem points from Coke products.  Ever seen those little codes printed on bottle caps or boxes?  Modern advances in alchemy now enable us to transmute those seemingly random characters into rewards like gift cards, movie tickets, and t-shirts (my personal favorite)!</p>
+<center>
+  <img src="http://i.imgur.com/2L4318Am.jpg" />
+  <span style="font-size: 30px">➜</span>
+  <img src="http://i.imgur.com/psBPqram.jpg" />
+</center>
+
+<p>It used to be pretty easy to log in and add codes to your account.  Unfortunately, My Coke Rewards recently redesigned their website and made it twice as slow, three times as unreliable, and five times as annoying.  Every time you log in, you&#39;re assaulted with messages to link your Facebook and Twitter accounts, presumably because people want to post on Facebook and Twitter about My Coke Rewards.  Let&#39;s be real, who would be lame enough to write anything about such a program?  Definitely not me???</p>
+<p>In light of their regrettable redesign, I decided to take matters into my own hands and set up a way to automate submission of these codes into their website.  The solution I developed allows me to send a text message containing the code and have it redeemed to my account automatically!</p>
+<center><a href="http://i.imgur.com/awwrqyb.jpg" target="_blank"><img src="http://i.imgur.com/awwrqybl.jpg" /></a></center>
+
+
+<h2 id="explanation">Explanation</h2>
+<p>I&#39;m using a service called <a href="">Twilio</a> to provide me with text messaging capabilities.  I pay $1/month for a permanent phone number that I can send/receive text messages from for a little less than a penny per message.</p>
+<p>The process:</p>
+<ol>
+<li>I send a text message to the Twilio phone number containing the code</li>
+<li>Twilio notifies my server of the text message</li>
+<li>My server:<ul>
+<li>Logs into the My Coke Rewards website</li>
+<li>Enters the code</li>
+<li>Verifies the code added points to my account</li>
+<li>Sends a text message back with a success or failure message</li>
+</ul>
+</li>
+</ol>
+<p>On the more technical side of things, I&#39;m using an excellent library called <a href="https://github.com/segmentio/nightmare">Nightmare.js</a> that allows me to interact with the My Coke Rewards website inside a headless browser.  The app runs as a <a href="https://www.docker.com">Docker</a> container on a <a href="https://www.digitalocean.com">Digital Ocean</a> host and is administered via <a href="https://github.com/dokku/dokku">Dokku</a>.</p>
+<p>You can see the source code <a href="https://github.com/scott113341/MyCokeBot">here</a>.</p>
