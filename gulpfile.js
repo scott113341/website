@@ -8,44 +8,72 @@ var uglify = require('gulp-uglify');
 var markdown = require('gulp-markdown');
 var nodemon = require('gulp-nodemon');
 
+var nodeStatic = require('node-static');
+var http = require('http');
+var fs = require('fs');
 
-gulp.task('clean', function(cb) {
-  del(['build/**/*'], cb);
-});
+
+gulp.task('build', gulp.series(
+  clean,
+  gulp.parallel(
+    buildHtmlIndex, buildHtmlAngular,
+    buildCssLess, buildCssFonts,
+    buildJs,
+    buildMarkdown, buildFavicons
+  )
+));
+gulp.task(watch);
+gulp.task(startServer);
+gulp.task('develop', gulp.series(
+  'build',
+  gulp.parallel(
+    startServer,
+    watch
+  )
+));
 
 
-gulp.task('html', function() {
-  gulp.src(['./src/html/index.html'])
+function clean() {
+  return del(['./build']);
+}
+
+
+function buildHtmlIndex() {
+  return gulp.src(['./src/html/index.html'])
     .pipe(plumber())
     .pipe(concat('index.html'))
     .pipe(ejs())
     .pipe(gulp.dest('./'));
+}
 
-  // copy angular templates
-  gulp.src(['./src/js/templates/**/*.html'])
+
+function buildHtmlAngular() {
+  return gulp.src(['./src/js/templates/**/*.html'])
     .pipe(plumber())
     .pipe(ejs())
     .pipe(gulp.dest('./build/templates'));
-});
+}
 
 
-gulp.task('css', function() {
-  gulp.src(['./src/css/**/*.less'])
+function buildCssLess() {
+  return gulp.src(['./src/css/**/*.less'])
     .pipe(plumber())
     .pipe(less())
     .pipe(less({compress: true}))
     .pipe(concat('application.css'))
     .pipe(gulp.dest('./build'));
+}
 
-  // copy ss-social-regular font
-  gulp.src(['./src/fonts/ss-social-regular/webfonts/ss-social-regular.*'])
+
+function buildCssFonts() {
+  return gulp.src(['./src/fonts/ss-social-regular/webfonts/ss-social-regular.*'])
     .pipe(plumber())
     .pipe(gulp.dest('./build/fonts/ss-social-regular'));
-});
+}
 
 
-gulp.task('js', function() {
-  gulp.src([
+function buildJs() {
+  return gulp.src([
       './bower_components/angular/angular.js',
       './bower_components/angular-route/angular-route.js',
       './bower_components/angulartics/dist/angulartics.min.js',
@@ -56,33 +84,34 @@ gulp.task('js', function() {
     .pipe(uglify())
     .pipe(concat('application.js'))
     .pipe(gulp.dest('./build'));
-});
+}
 
 
-gulp.task('markdown', function () {
-  gulp.src('./src/blog/*.md')
+function buildMarkdown() {
+  return gulp.src('./src/blog/*.md')
     .pipe(plumber())
     .pipe(markdown())
     .pipe(gulp.dest('./build/blog'));
-});
+}
 
 
-gulp.task('favicons', function() {
-  gulp.src(['./src/favicons/**'])
+function buildFavicons() {
+  return gulp.src(['./src/favicons/**'])
     .pipe(plumber())
     .pipe(gulp.dest('./build'));
-});
+}
 
 
-gulp.task('nodemon', function () {
-  nodemon({
-    script: 'devServer.js',
-    ext: 'html less js md',
-    ignore: ['./build/**']
-  })
-    .on('change', ['build']);
-});
+function watch() {
+  gulp.watch('./src/**/*', gulp.series('build'));
+}
 
 
-gulp.task('default', ['build', 'nodemon']);
-gulp.task('build', ['html', 'css', 'js', 'markdown', 'favicons']);
+function startServer() {
+  var server = new nodeStatic.Server('./', { cache: false });
+  http.createServer(function(request, response) {
+    request.addListener('end', function() {
+      server.serve(request, response);
+    }).resume();
+  }).listen(3000);
+}
