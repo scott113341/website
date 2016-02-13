@@ -4,10 +4,10 @@
 rm -rf ./build
 
 # compile html
-jade ./html --out ./build --hierarchy --pretty
+jade ./html --out ./build --hierarchy
 
 # compile css
-lessc ./css/app.less ./build/app.css
+lessc --clean-css ./css/app.less ./build/app.css
 
 # copy other files
 cp ./CNAME ./build
