@@ -12,4 +12,3 @@ lessc ./css/app.less ./build/app.css
 # copy files
 cp ./CNAME ./build
 cp -r ./fonts ./build
-cp -r ./img ./build

@@ -6,12 +6,14 @@
   "repository": "https://github.com/scott113341/website.git",
   "bugs": "https://github.com/scott113341/website/issues",
   "scripts": {
-    "build": "./build.sh"
+    "build": "./build.sh",
+    "deploy": "npm run build && push-dir --dir build --branch gh-pages --cleanup"
   },
   "devDependencies": {
+    "git-credential-env": "^0.4.0",
     "jade": "^1.11.0",
     "less": "^2.6.0",
-    "walk": "^2.3.9"
+    "push-dir": "^0.2.1"
   },
   "license": "MIT"
 }
