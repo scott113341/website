@@ -1,3 +1,3 @@
-# [ScottHardy.me](https://scotthardy.me)
+# [ScottHardy.me](https://www.scotthardy.me)
 
 This is my personal website.
