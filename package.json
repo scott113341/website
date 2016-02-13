@@ -2,9 +2,7 @@
   "name": "website",
   "description": "Scott Hardy's personal website.",
   "author": "Scott Hardy",
-  "main": "index.js",
   "repository": "https://github.com/scott113341/website.git",
-  "bugs": "https://github.com/scott113341/website/issues",
   "scripts": {
     "build": "./build.sh",
     "deploy": "npm run build && push-dir --dir build --branch gh-pages --cleanup"
