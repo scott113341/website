@@ -9,7 +9,7 @@ jade ./html --out ./build --hierarchy --pretty
 # compile css
 lessc ./css/app.less ./build/app.css
 
-# copy files
+# copy other files
 cp ./CNAME ./build
 cp -r ./fonts ./build
 cp -r ./favicons/* ./build
