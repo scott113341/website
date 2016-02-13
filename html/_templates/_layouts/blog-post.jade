@@ -1,0 +1,21 @@
+extends ./default
+
+
+block vars
+  - title = 'Scott Hardy : Blog'
+  - navPage = 'blog'
+
+
+block content
+  block postData
+
+  .blog-post
+    .row
+      .col-sm-8
+        p
+          a(href='/blog') Back to blog
+
+        h1= postTitle
+        h4= postDate
+
+        block post

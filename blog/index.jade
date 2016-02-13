@@ -1,0 +1,9 @@
+.blog
+  h1 Blog
+
+  each post in posts
+    .post
+      h2
+        a(ng-href='/blog/' + post.path)= post.title
+        small {{post.date | date: 'MMMM d, y'}}
+      p {{post.tldr}}
