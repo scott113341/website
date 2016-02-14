@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# all commands must exit 0
+set -e
+
 # clean build folder
 rm -rf ./build
 
