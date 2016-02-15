@@ -10,6 +10,6 @@ env:
 
 script:
   - npm install -g git-credential-env
-  - git config --global credential.helper "env --username=GITHUB_TOKEN"
-  - git config --global user.name "Travis CI"
+  - git config credential.helper "env --username=GITHUB_TOKEN"
+  - git config user.name "Travis CI"
   - npm run deploy
