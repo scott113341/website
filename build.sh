@@ -4,15 +4,16 @@
 set -e
 
 # clean build folder
-rm -rf ./build
+rm -rf build/
 
 # compile html
-jade ./html --out ./build --hierarchy
+jade html/ --out build/ --hierarchy
 
 # compile css
-lessc --clean-css ./css/app.less ./build/app.css
+lessc --clean-css css/app.less build/app.css
 
 # copy other files
-cp ./CNAME ./build
-cp -r ./fonts ./build
-cp -r ./favicons/* ./build
+cp CNAME build/
+cp -r favicons/* build/
+cp -r fonts/ build/fonts/
+cp -r images/ build/images/
