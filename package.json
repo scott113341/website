@@ -10,14 +10,14 @@
     "deploy": "npm run build && push-dir --dir build --branch gh-pages --cleanup"
   },
   "devDependencies": {
-    "git-credential-env": "^1.0.0",
-    "http-server": "^0.8.5",
-    "jade": "^1.11.0",
-    "jstransformer-marked": "^1.0.1",
-    "less": "^2.6.0",
-    "less-plugin-clean-css": "^1.5.1",
-    "nodemon": "^1.8.1",
-    "push-dir": "^0.2.1"
+    "git-credential-env": "1.0.0",
+    "http-server": "0.8.5",
+    "jade": "1.11.0",
+    "jstransformer-marked": "1.0.1",
+    "less": "2.6.0",
+    "less-plugin-clean-css": "1.5.1",
+    "nodemon": "1.8.1",
+    "push-dir": "0.2.1"
   },
   "license": "MIT"
 }
