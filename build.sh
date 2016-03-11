@@ -7,7 +7,7 @@ set -e
 rm -rf build/
 
 # compile html
-jade html/ --out build/ --hierarchy
+jade html/ --out build/
 
 # compile css
 lessc --clean-css css/app.less build/app.css
