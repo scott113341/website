@@ -19,4 +19,3 @@ lessc --clean-css css/app.less build/app.css
 cp CNAME build/
 cp -r favicon/* build/
 cp -r fonts/ build/fonts/
-cp -r images/ build/images/
