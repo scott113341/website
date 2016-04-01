@@ -7,7 +7,10 @@ set -e
 rm -rf build/
 
 # compile html
-jade html/ --out build/
+cp -r html/ build/
+jade build/
+find build/ -type f -name *.jade -delete
+rm -r build/_templates/ build/blog/drafts/
 
 # compile css
 lessc --clean-css css/app.less build/app.css
