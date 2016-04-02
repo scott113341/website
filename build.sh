@@ -4,7 +4,7 @@
 set -e
 
 # clean build folder
-rm -r build/
+rm -rf build/
 
 # compile html
 cp -r html/ build/
