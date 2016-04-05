@@ -10,7 +10,7 @@ rm -rf build/
 cp -r html/ build/
 jade build/
 find build/ -type f -name *.jade -delete
-rm -r build/_templates/ build/blog/drafts/
+rm -r build/_templates/
 
 # compile css
 lessc --clean-css css/app.less build/app.css
