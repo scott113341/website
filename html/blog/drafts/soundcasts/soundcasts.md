@@ -10,15 +10,13 @@
 
 ## The Problem
 
-This is the problem that precipitated the creation of Soundcasts:
-
 [Basil O'Glue](https://soundcloud.com/basil-oglue) is an awesome electronic music artist that we love to listen to.  Every month or so he releases a 2-hour music mix called [Momentum](https://soundcloud.com/basil-oglue/mom-30).
 
 It's a great podcast!
 
 Or, at least it *would* be if it were a podcast.
 
-Unfortunately, he simply posts the music onto SoundCloud and doesn't publish a podcast feed.  It's impossible to automatically download and listen to Momentum on iTunes, Pocket Casts, or any other podcast app.
+Unfortunately, he simply posts the music onto SoundCloud and doesn't publish a podcast feed.  It's impossible to automatically download and listen to Momentum on iTunes, iOS Podcasts, Pocket Casts, or any other podcast app.
 
 
 
@@ -32,13 +30,31 @@ The solution was to make a website that takes any SoundCloud profile and convert
 
 [![](soundcasts-basil-oglue.png)](soundcasts-basil-oglue.png)
 
-This will return a long URL that you can add to your podcast app of choice: [http://api.soundcasts.net/soundcast.xml?userId=basil-oglue&title=Basil%20O'Glue%3A%20Momentum&regexString=momentum](http://api.soundcasts.net/soundcast.xml?userId=basil-oglue&title=Basil%20O'Glue%3A%20Momentum&regexString=momentum)
+This will return a long URL that you can add to your podcast app of choice:
+
+<center>
+  <a style="word-wrap: break-word;" href="https://api.soundcasts.net/soundcast.xml?userId=basil-oglue&title=Basil%20O'Glue%3A%20Momentum&regexString=momentum">
+    https://api.soundcasts.net/soundcast.xml?userId=basil-oglue&title=Basil%20O'Glue%3A%20Momentum&regexString=momentum
+  </a>
+</center>
 
 Since we added a filter, `momentum`, we will only get tracks whose titles contain "momentum" (case insensitive).
 
 Here's what it looks like after subscribing in iTunes (`File` > `Subscribe to Podcast`):
 
 [![](itunes-basil-oglue.png)](itunes-basil-oglue.png)
+
+And the iOS Podcast app:
+
+<a href="ios-podcasts-basil-oglue.png">
+  <img style="max-height: 320px" src="ios-podcasts-basil-oglue.png" />
+</a>
+
+And Pocket Casts on Android:
+
+<a href="pocket-casts-basil-oglue.png">
+  <img style="max-height: 320px" src="pocket-casts-basil-oglue.png" />
+</a>
 
 
 
@@ -53,7 +69,7 @@ The code is running on a DigitalOcean host, deployed via Dokku.
 
 ### Website <a href="https://github.com/L33T-KR3W/soundcasts-web"><i class="ss-octocat"></i></a>
 
-The website is written using Motorcycle.js, a derivative of [Cycle.js](https://github.com/cyclejs).  We are also using three Node.js modules that we wrote ourselves!
+The website is written using [Motorcycle.js](https://github.com/motorcyclejs), a derivative of [Cycle.js](https://github.com/cyclejs).  We are also using three Node.js modules that we wrote ourselves!
 
 #### csjs <a href="https://github.com/rtsao/csjs"><i class="ss-octocat"></i></a>
 
