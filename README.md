@@ -1,4 +1,4 @@
-# [ScottHardy.me](https://www.scotthardy.me)
+# [https://www.scotthardy.me](https://www.scotthardy.me)
 
 [![build-status][build-status-badge]][build-status-href]
 [![dev-dependencies][dev-dependencies-badge]][dev-dependencies-href]
