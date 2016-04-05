@@ -4,7 +4,7 @@
   "author": "Scott Hardy",
   "repository": "https://github.com/scott113341/website.git",
   "scripts": {
-    "develop": "nodemon --ext jade,less --ignore build/ --exec 'npm run build && npm run serve'",
+    "develop": "nodemon --ext jade,less,md --ignore build/ --exec 'npm run build && npm run serve'",
     "serve": "http-server build/ -p 3000 -c 0",
     "build": "./build.sh",
     "deploy": "npm run build && push-dir --dir build --branch gh-pages --cleanup"
