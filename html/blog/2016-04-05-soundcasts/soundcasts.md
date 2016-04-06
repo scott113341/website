@@ -64,12 +64,15 @@ And Pocket Casts on Android:
 
 The server is a pretty simple Node.js server written using Express.  It contacts the SoundCloud API to get a list of tracks for the specified user, and then converts that list to a podcast XML feed.
 
-The code is running on a DigitalOcean host, deployed via Dokku.
+The code is running on a DigitalOcean host, deployed via Dokku.  Cloudflare provides free SSL.
 
 
 ### Website <a href="https://github.com/L33T-KR3W/soundcasts-web"><i class="ss-octocat"></i></a>
 
 The website is written using [Motorcycle.js](https://github.com/motorcyclejs), a derivative of [Cycle.js](https://github.com/cyclejs).  We are also using three Node.js modules that we wrote ourselves!
+
+The code is statically hosted on GitHub Pages, with Cloudflare providing free SSL.
+
 
 #### csjs <a href="https://github.com/rtsao/csjs"><i class="ss-octocat"></i></a>
 
