@@ -17,7 +17,7 @@
     "jade": "git://github.com/pugjs/jade.git#ea4be34ffe72af6ff39c7b750a06fed1e5bdca56",
     "jade-cli": "0.1.1",
     "jstransformer-marked": "1.0.1",
-    "less": "2.6.1",
+    "less": "2.7.0",
     "less-plugin-clean-css": "1.5.1",
     "nodemon": "1.9.2",
     "push-dir": "0.2.1"
