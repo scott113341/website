@@ -30,7 +30,11 @@ Laws in the United States no longer enforce this clear sexism, but the echos of 
   <p class="caption">Ian Turner</p>
 </div>
 
-While no data was collected for men who married during the same time period, it is obvious that there is a gender imbalance.  At absolute most, only 29% of men adopted their wife's surname; in reality, this number percentage is undoubtedly lower.  Clearly, coverture doctrine still holds some traditional influence over modern marriages, even if has passed out of law.
+While no data was collected for men who married during the same time period, it is obvious that there is a gender imbalance.  Given the absolute most generous interpretation, only 29% of men adopted their wife's surname; in reality, this percentage is undoubtedly lower.  Clearly, coverture doctrine still holds some traditional influence over modern marriages, even if has passed out of law.
+
+### Yee
+
+It is worth digressing here.  One could attempt to argue that although coverture is deplorable, the modern tradition of woman adopting man's name is pure, somehow free from that influence.
 
 
 
@@ -77,7 +81,7 @@ If neither parent changes their surname, what surname should their offspring rec
 
 
 
-## Personaly...
+## Personally...
 
 * I do not expect or desire that my parter change her surname
 * I do not want to change my surname
