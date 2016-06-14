@@ -14,12 +14,12 @@
   "devDependencies": {
     "git-credential-env": "1.0.0",
     "http-server": "0.9.0",
-    "jade": "git://github.com/pugjs/jade.git#ea4be34ffe72af6ff39c7b750a06fed1e5bdca56",
-    "jade-cli": "0.1.1",
     "jstransformer-marked": "1.0.1",
     "less": "2.7.1",
     "less-plugin-clean-css": "1.5.1",
     "nodemon": "1.9.2",
+    "pug": "2.0.0-beta3",
+    "pug-cli": "1.0.0-alpha6",
     "push-dir": "0.2.1"
   }
 }

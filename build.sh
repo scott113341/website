@@ -8,7 +8,8 @@ rm -rf build/
 
 # compile html
 cp -r html/ build/
-jade --obj "{basedir: '$PWD'}" build/
+pug --obj "{basedir: '$PWD'}" build/
+find build/ -type f -name *.pug -delete
 find build/ -type f -name *.jade -delete
 rm -r build/_templates/
 
