@@ -7,7 +7,7 @@
   "homepage": "https://www.scotthardy.me",
   "scripts": {
     "develop": "nodemon --ext jade,less,md --ignore build/ --exec 'npm run build && npm run serve'",
-    "serve": "http-server build/ -p 3000 -c 0",
+    "serve": "http-server build/ -p ${PORT:-3000} -c 0",
     "build": "./build.sh",
     "deploy": "npm run build && push-dir --dir build --branch gh-pages --cleanup"
   },
