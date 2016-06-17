@@ -9,7 +9,8 @@
     "develop": "nodemon --ext pug,less,md --ignore build/ --exec 'npm run build && npm run serve'",
     "serve": "http-server build/ -p ${PORT:-3000} -c 0",
     "build": "./build.sh",
-    "deploy": "npm run build && push-dir --dir build --branch gh-pages --cleanup"
+    "deploy": "npm run build && push-dir --dir build --branch gh-pages --cleanup",
+    "deps": "npm shrinkwrap --dev && shrinkpack"
   },
   "devDependencies": {
     "git-credential-env": "1.0.0",
@@ -20,6 +21,7 @@
     "nodemon": "1.9.2",
     "pug": "2.0.0-beta3",
     "pug-cli": "1.0.0-alpha6",
-    "push-dir": "0.2.1"
+    "push-dir": "0.2.1",
+    "shrinkpack": "0.12.5"
   }
 }
