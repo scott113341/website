@@ -15,3 +15,8 @@ script:
   - git config credential.helper "env --username=GITHUB_TOKEN"
   - git config user.name "Travis CI"
   - npm run deploy
+
+notifications:
+  email:
+    on_success: never
+    on_failure: always
