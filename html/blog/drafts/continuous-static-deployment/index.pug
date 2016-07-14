@@ -7,41 +7,4 @@ block postData
 
 
 block post
-  :marked
-    **WARNING** This is a post about JavaScript tooling.
-
-    ## Using Travis CI to deploy to GitHub Pages
-
-    There are a lot of blog posts that describe how to do this, but they all involve a lot of copy-paste scripts.  Some of them are also dangerous, and can leak your secret keys if used improperly.
-
-    For example, our `.travis.yml` can look like this:
-    <script src="https://gist.github.com/scott113341/a9c80242fa2ba895a86f.js?file=.travis.yml"></script>
-
-    And our `package.json` looks like this:
-    <script src="https://gist.github.com/scott113341/a9c80242fa2ba895a86f.js?file=package.json"></script>
-
-
-
-    ## push-dir
-
-
-
-
-    ## git-credential-env
-
-
-
-
-
-
-    <style>
-      .gist-meta {
-        display: none;
-      }
-      .js-line-number {
-        //display: none;
-      }
-      .gist-data {
-        border: none !important;
-      }
-    </style>
+  include:marked ./post.md
