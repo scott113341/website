@@ -17,4 +17,4 @@ rm -r build/_templates/
 lessc --clean-css css/app.less build/app.css
 
 # copy other files
-cp -r static/ build/
+cp -r static/* build/
