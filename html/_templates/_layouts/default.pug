@@ -15,13 +15,13 @@ html(lang='en')
       meta(name='google-site-verification', content='EHkUAAPr6Gml10wBbmwxjQEFwMrI08RVUpnOcpM1s_U')
 
       link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Lato:100italic,100,300italic,300,400italic,400,700italic,700,900italic,900|Montserrat:400,700')
-      link(rel='stylesheet', href='/app.css?v='+Date.now())
+      link(rel='stylesheet', href='/app.css')
       link(rel='icon', href='/favicon-196x196.png')
 
   body
-    .container.content
-      include ../_partials/header.pug
+    include ../_partials/header.pug
 
+    .container.content
       .row
         .col-sm-2
           include ../_partials/nav.pug
@@ -29,4 +29,5 @@ html(lang='en')
           block content
 
     include ../_partials/footer.pug
+
     include ../_partials/google-analytics.pug
