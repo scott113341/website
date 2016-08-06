@@ -19,7 +19,7 @@ html(lang='en')
       link(rel='icon', href='/favicon-196x196.png')
 
   body
-    .container
+    .container.content
       include ../_partials/header.pug
 
       .row
@@ -28,5 +28,5 @@ html(lang='en')
         .col-sm-10
           block content
 
-      include ../_partials/footer.pug
-      include ../_partials/google-analytics.pug
+    include ../_partials/footer.pug
+    include ../_partials/google-analytics.pug
