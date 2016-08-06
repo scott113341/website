@@ -6,7 +6,7 @@
   "repository": "git@github.com:scott113341/website.git",
   "homepage": "https://www.scotthardy.me",
   "scripts": {
-    "develop": "nodemon --ext pug,less,md --ignore build/ --exec 'npm run build && npm run serve'",
+    "develop": "npm run serve & nodemon --ext pug,less,md --ignore build/ --exec 'npm run build'",
     "serve": "http-server build/ -p ${PORT:-3000} -c 0",
     "build": "./build.sh",
     "deploy": "npm run build && push-dir --dir build --branch gh-pages --cleanup"
