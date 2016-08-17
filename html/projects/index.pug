@@ -10,18 +10,26 @@ block content
   -
     var projects = [
       {
+        name: 'Soundcasts',
+        img: 'soundcasts.png',
+        link: 'https://www.soundcasts.com',
+        source: 'https://github.com/soundcasts',
+        description: 'A website I made with Ryan and Matt that turns SoundCloud profiles into podcasts.',
+        tags: ['Node.js', 'Cycle.js']
+      },
+      {
         name: 'SCU•classes',
         img: 'scuclasses.png',
         link: 'http://scuclasses.com',
         description: 'SCU•classes is a website I made for Santa Clara Students to streamline the process of registering for classes.  It launched in January 2013, and is now used by over 90% of the undergraduate population (about 5000 unique students each quarter).',
-        tags: ['Angular.js', 'Ruby on Rails', 'Bootstrap', 'PostgreSQL', 'Nokogiri']
+        tags: ['Angular.js', 'Ruby on Rails', 'Bootstrap', 'PostgreSQL']
       },
       {
         name: 'SCU•books',
         img: 'scubooks.png',
         link: 'http://scubooks.com',
         description: 'I\'ve long disliked how absurd college textbook prices are, so I built SCU•books for Santa Clara University students to find the lowest prices on their textbooks.  It pulls up the book list for your class schedule, then searches several online retailers for prices.',
-        tags: ['Angular.js', 'Ruby on Rails', 'API libraries', 'Bootstrap', 'Nokogiri']
+        tags: ['Angular.js', 'Ruby on Rails', 'Bootstrap', 'PostgreSQL']
       },
       {
         name: 'Powder Keg Brewing Company Website',
@@ -30,13 +38,6 @@ block content
         source: 'https://github.com/scott113341/powderkegbrewingcompany',
         description: 'This is the website for Powder Keg Brewing Company, a new craft microbrewery in Niwot, Colorado.',
         tags: ['Ruby on Rails', 'Angular.js']
-      },
-      {
-        name: 'Appicenter',
-        img: 'appicenter.png',
-        source: 'https://github.com/scott113341/appicenter',
-        description: '<a href="http://ryantsao.com" target="_blank">Ryan Tsao</a> and I entered this for the 24-hour Broncohack hackathon.  The prompt was for an in-game app experience for the San Jose Earthquakes soccer team.  Our project consisted of a jumbotron display, mobile phone display, and admin interface.  The app implemented a real-time auctioning system and Instagram feed.',
-        tags: ['Firebase', 'Angular.js', 'Gulp.js', 'LESS', 'Bootstrap']
       }
     ]
 
@@ -57,7 +58,7 @@ block content
                 a(href=project.link) Visit site
 
               if project.link && project.source
-                span &nbsp|&nbsp;
+                span &nbsp&middot;&nbsp;
 
               if project.source
                 a(href=project.source) View source
