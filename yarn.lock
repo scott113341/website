@@ -2274,9 +2274,9 @@ punycode@^1.3.2, punycode@^1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-1.4.1.tgz#c0d5a63b2718800ad8e1eb0fa5269c84dd41845e"
 
-push-dir@^0.2.2:
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/push-dir/-/push-dir-0.2.2.tgz#adfe73b54c2f821be1e7915a648e39b3aea9e7e7"
+push-dir@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/push-dir/-/push-dir-0.4.0.tgz#5745081829d1bde835eaa63b24af019aba11bb62"
   dependencies:
     minimist "^1.2.0"
 
