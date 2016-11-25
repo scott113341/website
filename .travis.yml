@@ -11,6 +11,7 @@ env:
 script:
   - git config credential.helper "$PWD/node_modules/.bin/git-credential-env --username=GITHUB_TOKEN"
   - git config user.name "Travis CI"
+  - git config user.email builds@travis-ci.org
   - npm run deploy
 
 notifications:
