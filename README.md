@@ -4,7 +4,7 @@
 [![dev-dependencies][dev-dependencies-badge]][dev-dependencies-href]
 
 
-This is my personal website.
+This is the source code for my personal website.
 
 
 [build-status-badge]: https://img.shields.io/travis/scott113341/website/master.svg?style=flat-square
