@@ -18,3 +18,5 @@ lessc --clean-css css/app.less build/app.css
 
 # copy static files
 cp -r static/* build/
+
+git status
