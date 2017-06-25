@@ -11,16 +11,16 @@
     "deploy": "npm run build && push-dir --dir=build --branch=gh-pages --cleanup --verbose"
   },
   "devDependencies": {
-    "budo": "^9.4.2",
-    "express": "4.14.0",
+    "budo": "10.0.3",
+    "express": "4.15.3",
     "git-credential-env": "1.0.0",
     "jstransformer-marked": "1.0.2",
-    "less": "^2.7.2",
+    "less": "2.7.2",
     "less-plugin-clean-css": "1.5.1",
-    "livereload": "0.6.0",
-    "pug": "2.0.0-beta6",
+    "livereload": "0.6.2",
+    "pug": "2.0.0-rc.2",
     "pug-cli": "1.0.0-alpha6",
     "push-dir": "0.4.1",
-    "shelljs": "0.7.6"
+    "shelljs": "0.7.8"
   }
 }
