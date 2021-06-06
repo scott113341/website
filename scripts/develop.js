@@ -27,7 +27,7 @@ app.use('*', (req, res) => {
   res.render(thing, { basedir: './', __DEV: true });
 });
 
-app.listen(3000, () => console.log('started on port 3000'));
+app.listen(3000, () => console.log('Started on http://localhost:3000'));
 
 const exts = [
   'html',
