@@ -8,6 +8,7 @@ rm -rf build/
 
 # Compile html
 cp -r html/ build/
+rm -r build/blog/drafts/
 pug --obj "{ basedir: '$PWD' }" build/
 find build/ -type f -name *.pug -delete
 find build/ -type f -name *.jade -delete
