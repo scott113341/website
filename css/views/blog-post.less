@@ -1,5 +1,4 @@
 #blog-post {
-
   h1:first-of-type {
     margin-bottom: 3px;
   }
@@ -25,6 +24,11 @@
     max-width: 100%;
   }
 
+  pre {
+    padding: 1px 5px;
+    background: #eee;
+  }
+
   code {
     padding: 1px 4px;
     background: #eee;
@@ -39,13 +43,14 @@
 
   .img-box {
     border: 1px solid #aaa;
+    padding: 20px 20px 10px;
 
-    img {
-      padding: 20px;
+    img.bordered {
+      border: 1px solid #ccc;
     }
 
-    p.caption {
-      margin: 0 20px 10px;
+    .caption {
+      margin: 10px 20px 0;
       text-align: center;
     }
   }
@@ -53,5 +58,4 @@
   .ss-octocat:before {
     vertical-align: sub;
   }
-
 }

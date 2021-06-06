@@ -1,0 +1,8 @@
+extends /html/_templates/_layouts/blog-post.pug
+
+block postData
+  - postTitle = 'Postgres: Too Many Joins?'
+  - postDate = 'December 28, 2020'
+
+block post
+  include:marked post.md
