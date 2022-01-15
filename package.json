@@ -21,7 +21,7 @@
     "pug": "2.0.3",
     "pug-cli": "1.0.0-alpha6",
     "push-dir": "0.4.1",
-    "shelljs": "0.7.8"
+    "shelljs": "0.8.5"
   },
   "dependencies": {
     "prettier": "^2.2.1"
