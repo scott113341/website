@@ -1,0 +1,60 @@
+<!DOCTYPE html><html lang="en"><head><title>Scott Hardy · Blog</title><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="google-site-verification" content="EHkUAAPr6Gml10wBbmwxjQEFwMrI08RVUpnOcpM1s_U"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100italic,100,300italic,300,400italic,400,700italic,700,900italic,900|Montserrat:400,700"><link rel="stylesheet" href="/app.css"><link rel="icon" href="/favicon-196x196.png"></head><body><div id="header"><h1><a href="/">SCOTT HARDY</a></h1></div><div class="container content"><div class="row"><div class="col-sm-2"><ul class="no-print" id="nav"><li><a href="/">Home</a></li><li><a href="/projects">Projects</a></li><li class="active"><a href="/blog">Blog</a></li><li><a href="/resume">Résumé</a></li></ul></div><div class="col-sm-10"><div id="blog-post"><div class="row"><div class="col-sm-8"><p><a href="/blog">Back to blog</a></p><h1>Soundcasts</h1><h4>April 5, 2016</h4><p><strong><a href="https://soundcloud.com">SoundCloud</a></strong> is an great website where people can upload their music and easily share it with others.</p>
+<p><strong>Podcasts</strong> are episodic series of digital media that you can subscribe to and consume at your leisure.</p>
+<p><strong><a href="https://www.soundcasts.net">Soundcasts</a></strong> is the marriage of these two things that <a href="https://github.com/mmedal">Matt</a>, <a href="https://github.com/rtsao">Ryan</a>, and I developed.</p>
+<p><a href="soundcasts.png"><img src="soundcasts.png" alt=""></a></p>
+<h2 id="the-problem">The Problem</h2>
+<p><a href="https://soundcloud.com/basil-oglue">Basil O&#39;Glue</a> is an awesome electronic music artist that we love to listen to.  Every month or so he releases a 2-hour music mix called <a href="https://soundcloud.com/basil-oglue/mom-30">Momentum</a>.</p>
+<p>It&#39;s a great podcast!</p>
+<p>Or, at least it <em>would</em> be if it were a podcast.</p>
+<p>Unfortunately, he simply posts the music onto SoundCloud and doesn&#39;t publish a podcast feed.  It&#39;s impossible to automatically download and listen to Momentum on iTunes, iOS Podcasts, Pocket Casts, or any other podcast app.</p>
+<h2 id="the-solution">The Solution</h2>
+<p>The solution was to make a website that takes any SoundCloud profile and converts it into a true XML podcast feed that&#39;s digestable by podcast apps.  And that&#39;s exactly what we did.  It&#39;s very simple, all you supply is:</p>
+<ul>
+<li>The artist&#39;s SoundCloud URL: <code>https://soundcloud.com/basil-oglue</code></li>
+<li>The title you want for your Soundcast: <code>Basil O&#39;Glue: Momentum</code></li>
+<li>An optional filter you want to apply to track titles: <code>momentum</code></li>
+</ul>
+<p><a href="soundcasts-basil-oglue.png"><img src="soundcasts-basil-oglue.png" alt=""></a></p>
+<p>This will return a long URL that you can add to your podcast app of choice:</p>
+<center>
+  <a style="word-wrap: break-word;" href="https://api.soundcasts.net/soundcast.xml?userId=basil-oglue&title=Basil%20O'Glue%3A%20Momentum&regexString=momentum">
+    https://api.soundcasts.net/soundcast.xml?userId=basil-oglue&title=Basil%20O'Glue%3A%20Momentum&regexString=momentum
+  </a>
+</center>
+
+<p>Since we added a filter, <code>momentum</code>, we will only get tracks whose titles contain &quot;momentum&quot; (case insensitive).</p>
+<p>Here&#39;s what it looks like after subscribing in iTunes (<code>File</code> &gt; <code>Subscribe to Podcast</code>):</p>
+<p><a href="itunes-basil-oglue.png"><img src="itunes-basil-oglue.png" alt=""></a></p>
+<p>And the iOS Podcast app:</p>
+<a href="ios-podcasts-basil-oglue.png">
+  <img style="max-height: 320px" src="ios-podcasts-basil-oglue.png" />
+</a>
+
+<p>And Pocket Casts on Android:</p>
+<a href="pocket-casts-basil-oglue.png">
+  <img style="max-height: 320px" src="pocket-casts-basil-oglue.png" />
+</a>
+
+
+
+<h2 id="technical-details">Technical Details</h2>
+<h3 id="server-">Server <a href="https://github.com/L33T-KR3W/soundcasts-server"><i class="ss-octocat"></i></a></h3>
+<p>The server is a pretty simple Node.js server written using Express.  It contacts the SoundCloud API to get a list of tracks for the specified user, and then converts that list to a podcast XML feed.</p>
+<p>The code is running on a DigitalOcean host, deployed via Dokku.  Cloudflare provides free SSL.</p>
+<h3 id="website-">Website <a href="https://github.com/L33T-KR3W/soundcasts-web"><i class="ss-octocat"></i></a></h3>
+<p>The website is written using <a href="https://github.com/motorcyclejs">Motorcycle.js</a>, a derivative of <a href="https://github.com/cyclejs">Cycle.js</a>.  We are also using three Node.js modules that we wrote ourselves!</p>
+<p>The code is statically hosted on GitHub Pages, with Cloudflare providing free SSL.</p>
+<h4 id="csjs-">csjs <a href="https://github.com/rtsao/csjs"><i class="ss-octocat"></i></a></h4>
+<p>CSJS an awesome library that Ryan wrote that allows you to write modular, scoped CSS with valid JavaScript.  It&#39;s very simple in its approach, but enables you to easily tackle the thorny problem of combining CSS with JavaScript components.</p>
+<h4 id="push-dir-">push-dir <a href="https://github.com/L33T-KR3W/push-dir"><i class="ss-octocat"></i></a></h4>
+<p>This is a very simple library that Ryan and I wrote.  Its only purpose is to <code>git push</code> a directory you specify to a remote branch you specify.</p>
+<p>We are using this in our Travis CI configuration; when new changes get merged into the <code>master</code> branch of our <code>soundcasts-web</code> repository, Travis CI will automatically compile the new static frontend site and <code>push-dir</code> it to our <code>gh-pages</code> branch.</p>
+<h4 id="git-credential-env-">git-credential-env <a href="https://github.com/L33T-KR3W/git-credential-env"><i class="ss-octocat"></i></a></h4>
+<p>This is an <strong>incredibly</strong> simple library that Ryan and I wrote.  It allows you to register a Git credential helper that reads credentials from specified environment variables.  It&#39;s completely useless except in that it saves developers from having to understnad how Git credential helpers work: they can just copy-paste our code and have it work fine.</p>
+<p>We use this in our Travis CI configuration to read a GitHub authentication token so that <code>push-dir</code> can authenticate when it pushes the build to <code>gh-pages</code>.</p>
+</div></div></div></div></div></div><div class="no-print" id="footer"><div class="container"><div class="row"><div class="col-xs-6 left"><p><a href="mailto:scott.the.hardy@gmail.com"><svg class="icon"><use xlink:href="/icons.svg#icon-envelope"></use></svg></a><a href="https://github.com/scott113341"><svg class="icon"><use xlink:href="/icons.svg#icon-github-alt"></use></svg></a><a href="https://www.linkedin.com/in/scott113341"><svg class="icon"><use xlink:href="/icons.svg#icon-linkedin"></use></svg></a></p></div><div class="col-xs-6 right"><p><a href="https://github.com/scott113341/website">View source code</a></p></div></div></div></div><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-43831441-2', 'auto');
+ga('send', 'pageview');</script></body></html>
