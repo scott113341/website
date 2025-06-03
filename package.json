@@ -7,23 +7,22 @@
   "homepage": "https://www.scotthardy.me",
   "scripts": {
     "build": "scripts/build.sh",
-    "develop": "node scripts/develop.js",
-    "deploy": "npm run build && push-dir --dir=build --branch=gh-pages --cleanup --verbose"
+    "develop": "node scripts/develop.js"
   },
   "dependencies": {
-    "prettier": "^3.3.3"
+    "prettier": "^3.5.3"
   },
   "devDependencies": {
-    "budo": "11.8.4",
-    "express": "4.20.0",
-    "git-credential-env": "1.0.0",
-    "jstransformer-marked": "1.4.0",
-    "less": "4.2.0",
-    "less-plugin-clean-css": "1.6.0",
-    "livereload": "0.9.3",
-    "pug": "3.0.3",
-    "pug-cli": "1.0.0-alpha6",
-    "push-dir": "0.4.1",
-    "shelljs": "0.8.5"
+    "budo": "^11.8.4",
+    "express": "^5.1.0",
+    "git-credential-env": "^1.0.0",
+    "jstransformer-marked": "^1.4.0",
+    "less": "^4.3.0",
+    "less-plugin-clean-css": "^1.6.0",
+    "livereload": "^0.9.3",
+    "pug": "^3.0.3",
+    "pug-cli": "^1.0.0-alpha6",
+    "push-dir": "^0.4.1",
+    "shelljs": "^0.10.0"
   }
 }

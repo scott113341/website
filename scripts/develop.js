@@ -21,9 +21,9 @@ app.get('/app.css', (req, res) => {
   });
 });
 
-app.use('*', (req, res) => {
-  const baseUrl = req.baseUrl;
-  const thing = baseUrl === '' ? 'index' : baseUrl.slice(1) + '/index';
+app.get(/.*/, (req, res) => {
+  const path = req.path;
+  const thing = path === '' ? 'index' : path.slice(1) + '/index';
   res.render(thing, { basedir: './', __DEV: true });
 });
 
