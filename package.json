@@ -10,7 +10,7 @@
     "develop": "node scripts/develop.js"
   },
   "dependencies": {
-    "prettier": "^3.5.3"
+    "prettier": "^3.6.2"
   },
   "devDependencies": {
     "budo": "^11.8.4",
