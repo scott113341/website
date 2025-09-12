@@ -17,7 +17,7 @@
     "express": "^5.1.0",
     "git-credential-env": "^1.0.0",
     "jstransformer-marked": "^1.4.0",
-    "less": "^4.3.0",
+    "less": "^4.4.1",
     "less-plugin-clean-css": "^1.6.0",
     "livereload": "^0.10.3",
     "pug": "^3.0.3",
