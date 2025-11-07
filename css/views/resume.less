@@ -20,20 +20,39 @@
         margin-left: -14px;
         margin-bottom: 2px;
 
-        span {
+        span, span::after {
+          display: inline-block;
+        }
+
+        span.title {
           background: #fff1ca;
           border-radius: 4px;
           padding: 0 5px;
+          margin-right: 5px;
         }
 
-        small {
+        span.company {}
+
+        span.dates {
           margin-left: 6px;
+          font-size: 80%;
+          color: @border-gray;
+        }
+        span.dates::after {
+          content: '//';
+          margin: 0 3px;
+        }
+
+        span.location {
           font-size: 80%;
           color: @border-gray;
         }
       }
       ul, h4, p {
         margin: 0 0 2px;
+      }
+      ul {
+        padding-left: 30px;
       }
     }
   }

@@ -18,54 +18,54 @@ block content
       h2 Job Experience
       .section-2
         h3
-          span Principal Software Engineer
-          |  at brightwheel
-          small February 2017 - April 2023 | San Francisco, CA + Remote
-        p Started as the 2nd backend engineer, doing product development. Over time, shifted focus to strategic planning, scaling efforts, infrastructure, team efficiency, and hiring.
+          span.title Principal Software Engineer
+          span.company at #[a(href='https://mybrightwheel.com') brightwheel]
+          span.dates February 2017 - April 2023
+          span.location Remote
+        p Started as the 2nd backend engineer, doing product development. Over time, shifted focus to SRE work, strategic planning, scaling efforts, infrastructure, team efficiency, and hiring. Promoted three times to Senior, Staff, and Principal.
+        p #[strong 2022] Principal Engineer
         ul
-          li Owned application and infrastructure scaling efforts for annual high-growth business cycle; improved main Postgres database metrics by ~50%
-          li Lead technical due diligence process to evaluate a possible acquisition
-          li Lead technical planning (and then implementation) efforts for a new business product line, working closely with business strategists, product managers, and engineers to plan for an ambiguously-framed project.
-          li Rewrote main billing product, contributing to massive revenue growth and customer satisfaction
-          li Revamped interview process; replaced live coding "puzzle" challenge with a much-fairer session where the candidate extends their own take-home exercise
-          li Planned an implemented an new authorization system for internal tools, allowing business to securely leverage external contractors during busy seasons
+          li Lead technical planning & implementation efforts for a new business product line, working closely with business strategists, product managers, and engineers to plan for an ambiguously-framed project
+          li Migrated entire AWS environment to use CloudFormation for GitOps
+          li Lead company-wide effort to implement and roll out 2-factor authentication with minimal customer disruption and high satisfaction
+          li Lead technical due diligence on a company we looked at acquiring
+          li Kubernetes, Flux, AWS, Postgres, CloudFormation, Redshift, Airflow
+        p #[strong 2021] Staff Software Engineer
+        ul
+          li Revamped interview process; replaced coding "puzzle" challenge with a much-fairer session where the candidate extends their own take-home exercise
+          li Planned and implemented new authentication (OAuth) + authorization (RBAC) system for internal tools, allowing business to securely use external contractor labor during busy seasons
+          li Migrated Kubernetes to use Flux for GitOps, for production, staging, and ephemeral environments
+          li Ruby (Rails), Postgres, AWS, Kubernetes
+        p #[strong 2019] Senior Software Engineer
+        ul
+          li Owned application and infrastructure scaling efforts for annual high-growth business cycle; improved main Postgres database metrics (CPU, RAM, IOPS) by ~50%
+          li Rewrote main billing product, contributing to massive revenue growth, better customer satisfaction, and huge scale (over $1B processed)
           li Lead a multitude of process and tooling improvements: feature flags, continuous integration, project documentation process, product development process
-          li Primary technologies: Ruby (Rails), Postgres, Redis, Kubernetes, AWS
-          li Other technologies: Redshift, Airflow, React, Next.js
-      .section-2
-        h3
-          span Senior Software Engineer, Backend
-          |  at brightwheel
-          small February 2017 - April 2023 | San Francisco, CA
-        p
+          li Migrated all infrastructure from Heroku to AWS to meet scaling needs
+          li Ruby (Rails), Postgres, Redis, Heroku, AWS
+        p #[strong 2017] Software Engineer
         ul
           li Owned application and infrastructure scaling efforts for annual high-growth business cycle; improved main Postgres database metrics by ~50%
-          li Primary technologies: Ruby (Rails), Postgres, Redis, React, Heroku
+          li Developed customer-facing features across all product verticals: billing, messaging, timecards, student information system, media, notifications, reporting, etc.
+          li Ruby (Rails), Postgres, Redis, React, Heroku
       .section-2
         h3
-          span Software Engineer
-          |  at brightwheel
-          small February 2017 - April 2023 | San Francisco, CA
-        p Started as the 2nd backend engineer, focusing on product development. Mostly worked on backend, but some frontend work as needed.
-        ul
-          li Owned application and infrastructure scaling efforts for annual high-growth business cycle; improved main Postgres database metrics by ~50%
-          li Primary technologies: Ruby (Rails), Postgres, Redis, React, Heroku
-      .section-2
-        h3
-          span Software Engineer
-          |  at eBay
-          small November 2014 - April 2016 | San Jose, CA + Remote
+          span.title Software Engineer
+          span.company at #[a(href='https://www.ebay.com') eBay]
+          span.dates November 2014 - April 2016
+          span.location San Jose, CA + Remote
         p Worked full-time developing software in support of the storage operation team.
         ul
-          li Worked on a small team of three developers supporting storage operation team of about 15
+          li Member of a small team of three developers supporting storage operation team of about 15
           li Worked as main developer on storage insight platform, consisting of collection software (vanilla Python), API (Django), and UI (Angular)
           li Built environment-specific build tool for production deployments using Docker and Fabric
           li Modernized JavaScript development practices on the development team (build process, modularization)
       .section-2
         h3
-          span Software Development Intern
-          |  at Spectra Logic
-          small Summer 2013 | Boulder, CO
+          span.title Software Development Intern
+          span.company at #[a(href='https://mybrightwheel.com') Spectra Logic]
+          span.dates June 2013 - September 2013
+          span.location Boulder, CO
         p Worked mainly on the admin web UI written in Backbone with a Ruby on Rails backend, and the underlying Ruby worker code.
         ul
           li Adapted entire existing web UI to be responsive on mobile devices
@@ -75,47 +75,17 @@ block content
           li Worked full-time in 2-week sprint cycles
       .section-2
         h3
-          span Technical Co-Founder and Vice President
-          |  at Fashion Feather LLC.
-          small February 2011 - September 2011 | Longmont, CO
+          span.title Technical Co-Founder
+          span.company at Fashion Feather LLC
+          span.dates February 2011 - September 2011
+          span.location Longmont, CO
         p Started an online business selling hair feathers, a hot fashion trend during the 2011 summer. This was the second website I ever made, and my first real business.
         ul
           li Facilitated over $100k in gross sales on custom PHP website with Google Checkout integration
           li Designed and optimized order fulfillment and shipping workflow
           li Managed Google AdWords account (which drove the vast majority of sales)
           li Managed company finances as Treasurer
-          li Hired and managed 10 employees for order fulfillment
-    .section-1
-      h2 Projects
-      p See more projects at #[a(href='https://www.scotthardy.me/projects/') scotthardy.me/projects] or #[a(href='https://github.com/scott113341') github.com/scott113341]
-      .section-2
-        h3 yarn add shirts
-          small November 2016 - 2022
-        p A website that sold custom niche JavaScript t-shirts.
-        ul
-          li General API backend to handle billing and fulfillment
-          li Frontend built with Cycle.js, hosted on GitHub Pages
-          li Backend built with Express.js, hosted on Heroku
-      .section-2
-        h3 SCU•classes
-          small February 2013 - 2019
-        p A class scheduling website I built for Santa Clara University students in February 2013.
-        ul
-          li Identified the need for a replacement for the school's class search web app
-          li Performed extensive user testing during development to ensure an intuitive UI
-          li Over 500,000 visits since launch
-          li Over 90% of undergrads at SCU use SCU•classes
-          li Built with Angular.js and Ruby on Rails, hosted on Heroku
-      .section-2
-        h3 SCU•books
-          small January 2013 - 2019
-        p A textbook price comparison website I built for Santa Clara University students in January 2013.
-        ul
-          li Was inspired/furious by how expensive textbooks were at the school bookstore
-          li Worked with friends to expand to other 8 schools, leveraging the I18n gem to keep code extremely DRY and hosted on the same server
-          li Optimized codebase to concurrently access price APIs (Amazon, Barnes and Noble, etc.)
-          li Has been used over 22,000 times by students (all schools)
-          li Built with Angular.js and Ruby on Rails, hosted on Heroku
+          li Hired and managed 10 part-time employees for order fulfillment
     .section-1
       h2 Skills
       .section-2
@@ -126,19 +96,6 @@ block content
           li #[strong Ruby]: Rails, Sinatra, Sidekiq
           li #[strong Database]: PostgreSQL, Redis, Redshift
           li #[strong Infrastructure]: Docker, AWS, Kubernetes, Heroku
-      .section-2
-        h3 Laboratory Techniques
-        ul
-          li #[strong Microfluidics]: PDMS mold and device fab, electrophoretic separation
-          li #[strong Tissue engineering]: U87 cell culture, trypsinization, and passaging
-          li #[strong Biology]: standard lab techniques
-          li #[strong Chemistry]: general and organic chemistry
-      .section-2
-        h3 Spanish
-        ul
-          li Five Spanish classes in high school (scored 5 on AP Spanish exam)
-          li 2-week immersion trips to Mexico and Peru
-          li Two upper-division Spanish classes in college
     .section-1
       h2 Education
       .section-2

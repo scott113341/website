@@ -23,7 +23,8 @@ app.get('/app.css', (req, res) => {
 
 app.get(/.*/, (req, res) => {
   const path = req.path;
-  const thing = path === '' ? 'index' : path.slice(1) + '/index';
+  // Ensure we don't pass a leading slash to res.render()
+  const thing = path === '/' ? 'index' : path.replace(/^\//, '') + '/index';
   res.render(thing, { basedir: './', __DEV: true });
 });
 
