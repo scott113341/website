@@ -6,10 +6,12 @@ block vars
 
 block content
   #resume
-    h1 Résumé
+    h1.no-print Résumé
 
     .general-info
+      div(style='height: 20px').only-print
       p #[strong Email]: #[a(href='mailto:scott.the.hardy@gmail.com') scott.the.hardy@gmail.com]
+      p.only-print #[strong Phone]: #[a(href='tel:+13039172466') +1 303-917-2466]
       p.only-print #[strong Website]: #[a(href='https://www.scotthardy.me') scotthardy.me]
       p #[strong Github]: #[a(href='https://github.com/scott113341') github.com/scott113341]
       p #[strong LinkedIn]: #[a(href='https://www.linkedin.com/in/scott113341') linkedin.com/in/scott113341]
