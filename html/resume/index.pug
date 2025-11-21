@@ -25,7 +25,7 @@ block content
           span.dates February 2017 - April 2023
           span.location Remote
         p Started as the 2nd backend engineer, doing product development. Over time, shifted focus to SRE work, strategic planning, scaling efforts, infrastructure, team efficiency, and hiring. Promoted three times to Senior, Staff, and Principal.
-        p #[strong 2022] Principal Engineer
+        p #[strong 2022] Principal Software Engineer
         ul
           li Lead technical planning & implementation efforts for a new business product line, working closely with business strategists, product managers, and engineers to plan for an ambiguously-framed project
           li Migrated entire AWS environment to use CloudFormation for GitOps
@@ -88,6 +88,32 @@ block content
           li Managed Google AdWords account (which drove the vast majority of sales)
           li Managed company finances as Treasurer
           li Hired and managed 10 part-time employees for order fulfillment
+    // #[a(href='href') text]
+    .section-1
+      h2 Recent Side Projects
+      .section-2
+        h3 #[a(href='https://monaitor.they.industries') monAItor] (#[a(href='https://github.com/scott113341/monaitor') source])
+        ul
+          li Web app that monitors websites for specific changes, using LLMs for flexibility (currently personal use only)
+          li For example, #[a(href='https://monaitor.they.industries/monitors/35207889-050b-41de-94fc-fab640fc995a') this monitor] will notify me once #[a(href='https://www.larimer.gov/naturalresources/parks/regional-paved-trails/poudre-river-trail') this website] says the new bike path construction is complete
+          li Ruby (Sinatra) web app backed by Postgres, deployed to my personal Kubernetes cluster (via Flux). Uses headless browser bindings to get website screenshot and text, which are both fed to an LLM for analysis.
+      .section-2
+        h3 AskSMS (#[a(href='https://github.com/scott113341/asksms') source])
+        ul
+          li Small personal tool that uses LLMs + #[a(href='https://openrouter.ai/perplexity') Perplexity] to return information over 160-character SMS messages that are compatible with #[a(href='https://www.t-mobile.com/coverage/satellite-phone-service') T-Mobile Starlink]. This allows information to be looked up while deep in the backcountry where there is no cell coverage.
+          li Ruby (Sinatra) web app, deployed to my personal Kubernetes cluster (via Flux). SMS via Twilio.
+      .section-2
+        h3 Home Assistant
+        ul
+          li Reverse-engineered IR codes for my heat pump remotes (I don't have a thermostat), allowing for me to control my rental unit's temperature with automation, while away from home, and little Zigbee buttons I have next to my door/bed
+          li Made a virtual sunrise lamp for better mornings. Goes from a deep red to a bright daylight over 30 minutes, coinciding with the natural sunrise each morning.
+      .section-2
+        h3 SmartMarker (#[a(href='/projects/smartmarker/') gallery])
+        ul
+          li Making a "ruler" to draw volumetric markings on SmartWater bottles, popular among hikers for their skinny cross-section, light weight, durability, and availability.
+          li The design is defined using #[a(href='https://openscad.org') OpenSCAD], a CAD-as-code tool
+          li Prototyping on paperboard (non-baffled cardboard) using the laser cuter at a local makerspace
+          li Completed trial run of different materials (steel/aluminum) and finishes (power/anodized) from #[a(href='https://sendcutsend.com/') SendCutSend] which I then etched markings into with the laser cutter
     .section-1
       h2 Education
       .section-2
