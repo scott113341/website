@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "budo": "^11.8.4",
-    "express": "^5.2.0",
+    "express": "^5.2.1",
     "git-credential-env": "^1.0.0",
     "jstransformer-marked": "^1.4.0",
     "less": "^4.4.2",
