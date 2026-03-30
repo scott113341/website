@@ -1,7 +1,7 @@
 FROM node:latest AS builder
 WORKDIR /app
-COPY package.json yarn.lock ./
-RUN yarn install --frozen-lockfile
+COPY package* ./
+RUN npm ci
 COPY ./css ./css
 COPY ./html ./html
 COPY ./scripts ./scripts
