@@ -15,14 +15,12 @@
   "devDependencies": {
     "budo": "^11.8.4",
     "express": "^5.2.1",
-    "git-credential-env": "^0.4.0",
     "jstransformer-marked": "^1.4.0",
     "less": "^4.6.4",
     "less-plugin-clean-css": "^1.6.0",
     "livereload": "^0.10.3",
     "pug": "^3.0.4",
     "pug-cli": "^1.0.0-alpha6",
-    "push-dir": "^0.4.1",
     "shelljs": "^0.10.0"
   }
 }
